@@ -2908,7 +2908,7 @@ select {
   width: 215px;
   height: 215px;
   border-radius: 50%;
-  background-color: #FDEBE9;
+  /* background-color: #b49b5b ;  */
   z-index: -1;
 }
 .adv-card .adv-img img {
