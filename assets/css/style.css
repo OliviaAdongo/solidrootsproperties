@@ -2328,7 +2328,7 @@ select {
 }
 
 .hero-slide-1 {
-  background-image: url(https://img.freepik.com/free-photo/aerial-shot-farmland-clear-sky-eifel-region-germany_181624-26567.jpg?t=st=1731062777~exp=1731066377~hmac=95ce55e5bc2ac1833bc3fabd33ad47da80f979faf3e306b0420cb39d82d7bf6c&w=1800);
+  background-image: url(https://images.unsplash.com/photo-1719336313493-87a1684f2732?q=80&w=2865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
 .hero-slide-2 {
@@ -2908,7 +2908,7 @@ select {
   width: 215px;
   height: 215px;
   border-radius: 50%;
-  /* background-color: #b49b5b ;  */
+  background-color: #efe0c6; 
   z-index: -1;
 }
 .adv-card .adv-img img {
