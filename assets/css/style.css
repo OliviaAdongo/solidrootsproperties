@@ -35,7 +35,11 @@
 
 
 
-
+.logo-light{
+  width: 170px;
+  left: 15px;
+  max-height: 120px;
+}
 
 .tab .nav-tabs{ border-bottom: 2px solid #e8e8e8; }
 .tab .nav-tabs li a{
