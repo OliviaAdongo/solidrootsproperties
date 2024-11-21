@@ -308,7 +308,7 @@ $(document).ready(function() {
             }
           }
         },
-        colors: ['#0080ff', '#18d26b', '#ffa800', '#93b4d4'],
+        colors: ['#B78509f', '#18d26b', '#ffa800', '#93b4d4'],
         labels: ['Bitcoin', 'Ethereum', 'Ripple', 'Bitcoin Cash'],
         legend: {
           show: true,

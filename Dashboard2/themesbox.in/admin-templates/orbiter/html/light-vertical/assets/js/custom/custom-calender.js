@@ -64,7 +64,7 @@
                         title: 'Workshop',
                         start: new Date(y, m, d-10),
                         end: new Date(y, m, d-15),
-                        color: '#0080ff',
+                        color: '#B78509f',
                     },
                     {
                         id: 999,

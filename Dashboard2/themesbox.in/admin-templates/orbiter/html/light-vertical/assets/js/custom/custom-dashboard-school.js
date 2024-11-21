@@ -25,7 +25,7 @@ $(document).ready(function() {
         stroke: {
             curve: 'straight',
         },
-        colors: ['#0080ff'],
+        colors: ['#B78509f'],
         series: [{
             name: 'Percentage',
             data: [31, 40, 28, 51, 62, 48, 72, 58, 89, 80]

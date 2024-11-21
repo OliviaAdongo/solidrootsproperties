@@ -11,8 +11,8 @@ $(document).ready(function() {
         backgroundColor: 'transparent',
         markerStyle: {
           initial: {
-            fill: '#0080ff',
-            stroke: '#0080ff',
+            fill: '#B78509f',
+            stroke: '#B78509f',
             "fill-opacity": 1,
             "stroke-width": 15,
             "stroke-opacity": 0.2
@@ -41,7 +41,7 @@ $(document).ready(function() {
     $('#usa').vectorMap({map: 'us_aea_en',backgroundColor: 'transparent',
         regionStyle: {
             initial: {
-                fill: '#0080ff'
+                fill: '#B78509f'
             }
     }});
     /* -- jVector Map - India Map -- */

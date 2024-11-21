@@ -8,7 +8,7 @@ $(document).ready(function() {
     /* -- C3 - Scatter Plot Chart -- */
     var scatterPlotChart = c3.generate({
         bindto: '#c3-scatter-plot',
-        color: { pattern: ["#d4d8de", "#18d26b", "#0080ff"] },
+        color: { pattern: ["#d4d8de", "#18d26b", "#B78509f"] },
         data: {
             xs: {
                 setosa: 'setosa_x',
@@ -60,7 +60,7 @@ $(document).ready(function() {
     /* -- C3 - Step Chart -- */
     var stepcChart = c3.generate({
         bindto: '#c3-step',
-        color: { pattern: ["#0080ff", "#18d26b"] },
+        color: { pattern: ["#B78509f", "#18d26b"] },
         data: {
             columns: [
                 ['SeriesA', 300, 350, 300, 0, 0, 100],
@@ -75,7 +75,7 @@ $(document).ready(function() {
     /* -- C3 - Simple Line Chart -- */
     var simpleLineChart = c3.generate({
         bindto: '#c3-simple-line',
-        color: { pattern: ["#0080ff", "#18d26b"] },
+        color: { pattern: ["#B78509f", "#18d26b"] },
         data: {
             columns: [
                 ['SeriesA', 30, 200, 100, 400, 150, 250],
@@ -86,7 +86,7 @@ $(document).ready(function() {
     /* -- C3 - Spline Chart -- */
     var splineChart = c3.generate({
         bindto: '#c3-spline',
-        color: { pattern: ["#0080ff", "#18d26b"] },
+        color: { pattern: ["#B78509f", "#18d26b"] },
         data: {
             columns: [
                 ['SeriesA', 30, 200, 100, 400, 150, 250],
@@ -98,7 +98,7 @@ $(document).ready(function() {
     /* -- C3 - Area Chart -- */
     var areaChart = c3.generate({
         bindto: '#c3-area',
-        color: { pattern: ["#0080ff", "#18d26b"] },
+        color: { pattern: ["#B78509f", "#18d26b"] },
         data: {
             columns: [
                 ['SeriesA', 100, 75, 50, 75, 50, 75, 100],
@@ -113,7 +113,7 @@ $(document).ready(function() {
     /* -- C3 - Stacked Area Chart -- */
     var stackedChart = c3.generate({
         bindto: '#c3-stacked-area',
-        color: { pattern: ["#0080ff", "#18d26b"] },
+        color: { pattern: ["#B78509f", "#18d26b"] },
         data: {
             columns: [
                 ['SeriesA', 100, 75, 50, 75, 50, 75, 100],
@@ -129,7 +129,7 @@ $(document).ready(function() {
     /* -- C3 - Bar Chart -- */
     var barChart = c3.generate({
         bindto: '#c3-bar',
-        color: { pattern: ["#0080ff", "#18d26b"] },
+        color: { pattern: ["#B78509f", "#18d26b"] },
         data: {
             columns: [
                 ['SeriesA', 30, 200, 100, 400, 150, 250],
@@ -146,7 +146,7 @@ $(document).ready(function() {
     /* -- C3 - Stacked Bar Chart -- */
     var stackedBarChart = c3.generate({
         bindto: '#c3-stacked-bar',
-        color: { pattern: ["#d4d8de", "#0080ff", "#18d26b"] },
+        color: { pattern: ["#d4d8de", "#B78509f", "#18d26b"] },
         data: {
             columns: [
                 ['SeriesA', 30, 200, 200, 400, 150, 250],
@@ -167,7 +167,7 @@ $(document).ready(function() {
     /* -- C3 - Combination Chart -- */
     var combinationChart = c3.generate({
         bindto: '#c3-combination',
-        color: { pattern: ["#0080ff", "#d4d8de", "#ff3f3f", "#00b8d4", "#18d26b", "#ffa800"] },
+        color: { pattern: ["#B78509f", "#d4d8de", "#ff3f3f", "#00b8d4", "#18d26b", "#ffa800"] },
         data: {
             columns: [
                 ['SeriesA', 30, 20, 50, 40, 60, 50],
@@ -204,7 +204,7 @@ $(document).ready(function() {
             width: 40,
         },
         color: {
-            pattern: ['#18d26b', '#ff3f3f', '#ffa800', '#0080ff'],
+            pattern: ['#18d26b', '#ff3f3f', '#ffa800', '#B78509f'],
             threshold: {
                 values: [30, 60, 90, 100]
             }
@@ -241,7 +241,7 @@ $(document).ready(function() {
     /* -- C3 - Pie Chart -- */
     var pieChart = c3.generate({
         bindto: '#c3-pie',
-        color: { pattern: ["#0080ff", "#d4d8de", "#18d26b"] },
+        color: { pattern: ["#B78509f", "#d4d8de", "#18d26b"] },
         data: {
             columns: [
                 ['SeriesA', 40],
@@ -257,7 +257,7 @@ $(document).ready(function() {
     /* -- C3 - Donut Chart -- */
     var donutChart = c3.generate({
         bindto: '#c3-donut',
-        color: { pattern: ["#0080ff", "#d4d8de", "#18d26b"] },
+        color: { pattern: ["#B78509f", "#d4d8de", "#18d26b"] },
         data: {
             columns: [
                 ['SeriesA', 40],

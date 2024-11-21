@@ -12,7 +12,7 @@ $(document).ready(function() {
         width: "150",
         height: '150',
         chartRangeMax: 50,
-        lineColor: '#0080ff',
+        lineColor: '#B78509f',
         fillColor: 'transparent',
         highlightLineColor: '#d4d8de',
         highlightSpotColor: 'rgba(0,128,255,0.5)'
@@ -24,7 +24,7 @@ $(document).ready(function() {
         width: "150",
         height: '150',
         chartRangeMax: 50,
-        lineColor: '#0080ff',
+        lineColor: '#B78509f',
         fillColor: 'rgba(0,128,255,0.5)',
         highlightLineColor: '#d4d8de',
         highlightSpotColor: 'rgba(0,128,255,0.5)'
@@ -35,7 +35,7 @@ $(document).ready(function() {
         type: 'pie',
         width: '150',
         height: '150',
-        sliceColors: ['#18d26b', '#d4d8de', '#0080ff']
+        sliceColors: ['#18d26b', '#d4d8de', '#B78509f']
     });
 	/* -----  Sparkline - Bar  ----- */
 	var sparklineBarData = [30, 40, 60, 80, 30, 20, 40, 50, 70, 90];
@@ -43,7 +43,7 @@ $(document).ready(function() {
         type: 'bar',
         width: "150",
         height: '150',
-        barColor: '#0080ff',
+        barColor: '#B78509f',
         barWidth: '12',
         barSpacing: '5'      
 	});
@@ -54,7 +54,7 @@ $(document).ready(function() {
         type: 'bar',
         width: "150",
         height: '150',
-        barColor: '#0080ff',
+        barColor: '#B78509f',
         barWidth: '12',
         barSpacing: '5'
     });    
@@ -74,7 +74,7 @@ $(document).ready(function() {
 	    type: 'tristate',
 	    width: '150',
 	    height: '150',
-	    posBarColor: '#0080ff',
+	    posBarColor: '#B78509f',
 	    negBarColor: '#18d26b',
 	    zeroBarColor: '#d4d8de',
 	    barWidth: 12,
@@ -86,8 +86,8 @@ $(document).ready(function() {
     	type: 'discrete',
 	    width: '150',
 	    height: '50',
-	    lineColor: '#0080ff',
-	    thresholdColor: '#0080ff',
+	    lineColor: '#B78509f',
+	    thresholdColor: '#B78509f',
 	    thresholdWidth: '12',
 	});
     /* -----  Sparkline - Bullet Chart  ----- */
@@ -97,7 +97,7 @@ $(document).ready(function() {
 	    width: '150',
 	    height: '50',
 	    targetColor: '#ff3f3f',
-	    performanceColor: '#0080ff',
+	    performanceColor: '#B78509f',
     	rangeColors: ['rgba(0,128,255,0.2)','rgba(0,128,255,0.4)','rgba(0,128,255,0.6)']
 	});
     /* -----  Sparkline - Box Plot Chart  ----- */
@@ -107,10 +107,10 @@ $(document).ready(function() {
 	    width: '150',
 	    height: '50',
 	    raw: false,
-	    boxLineColor: '#0080ff',
+	    boxLineColor: '#B78509f',
 	    boxFillColor: 'rgba(0,128,255,0.5)',
-	    whiskerColor: '#0080ff',
-	    outlierLineColor: '#0080ff',
+	    whiskerColor: '#B78509f',
+	    outlierLineColor: '#B78509f',
 	    outlierFillColor: '#d4d8de',
 	    medianColor: '#ff3f3f',
 	    targetColor: '#2bcd72'

@@ -35,10 +35,10 @@ $(document).ready(function() {
             datasets: [{
                 label: 'Series A',
                 data: [-80, 40, -60, 30, -60, -40, 20],
-                backgroundColor: ["#0080ff"],
-                borderColor: ["#0080ff"],
+                backgroundColor: ["#B78509f"],
+                borderColor: ["#B78509f"],
                 pointBorderColor: ["transparent","transparent","transparent","transparent","transparent","transparent","transparent"],
-                pointBackgroundColor: ["#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff"],
+                pointBackgroundColor: ["#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f"],
                 fill: false,
                 borderDash: [5, 5],
                 pointRadius: 15,
@@ -124,9 +124,9 @@ $(document).ready(function() {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [{
                     label: 'Series A',
-                    backgroundColor: ["#0080ff"],
-                    borderColor: ["#0080ff"],
-                    pointBorderColor: ["#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff"],
+                    backgroundColor: ["#B78509f"],
+                    borderColor: ["#B78509f"],
+                    pointBorderColor: ["#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f"],
                     pointBackgroundColor: ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
                     pointBorderWidth: 2,
                     data: [-25, 32, -17, 83, -87, 92, -82],
@@ -194,8 +194,8 @@ $(document).ready(function() {
                         label: 'Series A',
                         steppedLine: true,
                         data: [68, -68, 20, 90, -20, 31],
-                        borderColor: ["#0080ff"],
-                        pointBorderColor: ["#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff"],
+                        borderColor: ["#B78509f"],
+                        pointBorderColor: ["#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f"],
                         pointBackgroundColor: ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
                         pointBorderWidth: 2,
                         fill: false,
@@ -231,9 +231,9 @@ $(document).ready(function() {
             type: 'line',
             data: {
                 datasets: [{
-                    borderColor: ["#0080ff"],
+                    borderColor: ["#B78509f"],
                     backgroundColor: ["rgba(0,128,255,0.5)"],
-                    pointBorderColor: ["#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff"],
+                    pointBorderColor: ["#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f"],
                     pointBackgroundColor: ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
                     pointBorderWidth: 2,
                     label: 'Series A',
@@ -329,9 +329,9 @@ $(document).ready(function() {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                     datasets: [{
                         label: 'My First dataset',
-                        backgroundColor: ["#0080ff"],
-                        borderColor: ["#0080ff"],                        
-                        pointBorderColor: ["#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff"],
+                        backgroundColor: ["#B78509f"],
+                        borderColor: ["#B78509f"],                        
+                        pointBorderColor: ["#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f"],
                         pointBackgroundColor: ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
                         pointBorderWidth: 2,
                         data: [10, 23, 5, 88, 67, 43, 0],
@@ -382,8 +382,8 @@ $(document).ready(function() {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                     datasets: [{
                         label: 'Series A',
-                        backgroundColor: ["#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff"],
-                        borderColor: ["#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff"],
+                        backgroundColor: ["#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f"],
+                        borderColor: ["#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f"],
                         borderWidth: 1,
                         data: [50, 70, 40, 90, 60, 40, 80, 20]
                     }, {
@@ -429,8 +429,8 @@ $(document).ready(function() {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                     datasets: [{
                         label: 'Series A',
-                        backgroundColor: ["#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff"],
-                        borderColor: ["#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff"],
+                        backgroundColor: ["#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f"],
+                        borderColor: ["#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f"],
                         borderWidth: 1,
                         data: [50, 70, 40, 90, 60, 40, 80, 20]
                     }, {
@@ -481,7 +481,7 @@ $(document).ready(function() {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                     datasets: [{
                         label: 'Series A',
-                        backgroundColor: ["#0080ff","#18d26b","#d4d8de","#ff3f3f","#ffa800","#00b8d4","#263a5b"],
+                        backgroundColor: ["#B78509f","#18d26b","#d4d8de","#ff3f3f","#ffa800","#00b8d4","#263a5b"],
                         yAxisID: 'y-axis-1',
                         data: [82, 20, -96, 52, -49, -78, -4]
                     }, {
@@ -535,7 +535,7 @@ $(document).ready(function() {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                     datasets: [{
                         label: 'Series A',
-                        backgroundColor: ["#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff", "#0080ff"],
+                        backgroundColor: ["#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f", "#B78509f"],
                         data: [70, 66, 50, 69, 9, 36, -26]
                     }, {
                         label: 'Series B',
@@ -673,8 +673,8 @@ $(document).ready(function() {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [{
                     backgroundColor: ["rgba(0,128,255,0.5)"],
-                    borderColor: ["#0080ff"],
-                    pointBorderColor: ["#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff"],
+                    borderColor: ["#B78509f"],
+                    pointBorderColor: ["#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f"],
                     pointBackgroundColor: ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
                     pointBorderWidth: 2,
                     data: [6.06, 82.2, -22.11, 21.53, -21.47, 73.61, -53.75, -60.32],
@@ -776,8 +776,8 @@ $(document).ready(function() {
                     fill: '-1'
                 }, {
                     backgroundColor: ["rgba(0,128,255,0.5)"],
-                    borderColor: ["#0080ff"],
-                    pointBorderColor: ["#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff"],
+                    borderColor: ["#B78509f"],
+                    pointBorderColor: ["#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f"],
                     pointBackgroundColor: ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
                     pointBorderWidth: 2,                                               
                     data: [78, 38, 60, 35, 66, 55, 45, 74],
@@ -852,9 +852,9 @@ $(document).ready(function() {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [{
                     label: 'Series A',
-                    borderColor: ["#0080ff"],
-                    backgroundColor: ["#0080ff"],
-                    pointBorderColor: ["#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff"],
+                    borderColor: ["#B78509f"],
+                    backgroundColor: ["#B78509f"],
+                    pointBorderColor: ["#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f"],
                     pointBackgroundColor: ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
                     pointBorderWidth: 2,
                     data: [-83, 45, 80, 91, 52, 84, 36],
@@ -976,9 +976,9 @@ $(document).ready(function() {
                     fill: '-1'
                 }, {
                     backgroundColor: ["rgba(0,128,255,0.5)"],
-                    borderColor: ["#0080ff"],
+                    borderColor: ["#B78509f"],
                     pointBorderColor: ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
-                    pointBackgroundColor: ["#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff","#0080ff"],
+                    pointBackgroundColor: ["#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f","#B78509f"],
                     pointBorderWidth: 1,
                     data: [73.33, 80.78, 68.05, 68.59, 76.79, 77.24, 66.08, 72.37],
                     label: 'D5',
@@ -1024,9 +1024,9 @@ $(document).ready(function() {
                 datasets: [{
                     label: 'Series A',
                     backgroundColor: ["rgba(0,128,255,0.5)"],
-                    borderColor: ["#0080ff"],
+                    borderColor: ["#B78509f"],
                     pointBorderColor: ["#ffffff"],
-                    pointBackgroundColor: ["#0080ff"],
+                    pointBackgroundColor: ["#B78509f"],
                     pointBorderWidth: 1,
                     data: [35,12,49,81,89,34,81]
                 }, {
@@ -1070,7 +1070,7 @@ $(document).ready(function() {
                 datasets: [{
                     data: [40,35,25],
                     borderColor: 'transparent',
-                    backgroundColor: ["#0080ff","#18d26b","#d4d8de"],
+                    backgroundColor: ["#B78509f","#18d26b","#d4d8de"],
                     label: 'Dataset 1'
                 }],
                 labels: ['Series A','Series B','Series C']
@@ -1099,7 +1099,7 @@ $(document).ready(function() {
                 datasets: [{
                     data: [40,35,25],
                     borderColor: 'transparent',
-                    backgroundColor: ["#0080ff","#18d26b","#d4d8de"],
+                    backgroundColor: ["#B78509f","#18d26b","#d4d8de"],
                     label: 'Dataset 1'
                 }],
                 labels: ['Instagram','Facebook','News Feed']

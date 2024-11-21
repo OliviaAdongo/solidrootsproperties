@@ -11,8 +11,8 @@ $(document).ready(function() {
         backgroundColor: 'transparent',
         markerStyle: {
           initial: {
-            fill: '#0080ff',
-            stroke: '#0080ff',
+            fill: '#B78509f',
+            stroke: '#B78509f',
             "fill-opacity": 1,
             "stroke-width": 15,
             "stroke-opacity": 0.2
@@ -52,7 +52,7 @@ $(document).ready(function() {
         dataLabels: {
             enabled: false
         },
-        colors: ['#0080ff','#18d26b','#d4d8de'],
+        colors: ['#B78509f','#18d26b','#d4d8de'],
         series: [60, 45, 25],
         labels: ['Gadget', 'Fashion', 'Food'],
         legend: {
@@ -92,7 +92,7 @@ $(document).ready(function() {
                 columnWidth: '20%',
             },
         },
-        colors: ['#0080ff','#d4d8de'],
+        colors: ['#B78509f','#d4d8de'],
         series: [{
             name: 'Earning',
             data: [5, 7, 8, 6, 7, 5, 6, 6, 7, 4]
@@ -152,7 +152,7 @@ $(document).ready(function() {
         yaxis: {
             min: 0
         },
-        colors:["#0080ff"],
+        colors:["#B78509f"],
         grid: {
             row: {
                 colors: ['transparent', 'transparent'], opacity: .2

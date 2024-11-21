@@ -32,7 +32,7 @@ $(document).ready(function() {
             width: 2,
             colors: ['transparent']
         },
-        colors: ['#0080ff','#18d26b','#d4d8de'],
+        colors: ['#B78509f','#18d26b','#d4d8de'],
         series: [{
             name: 'New',
             data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
@@ -115,7 +115,7 @@ $(document).ready(function() {
         yaxis: {
             min: 0
         },
-        colors:["#0080ff"],
+        colors:["#B78509f"],
         grid: {
             row: {
                 colors: ['transparent', 'transparent'], opacity: .2
@@ -226,7 +226,7 @@ $(document).ready(function() {
         stroke: {
             dashArray: 4
         },
-        colors:["#0080ff"],
+        colors:["#B78509f"],
         series: [65],
         labels: ['Completed'],        
     }

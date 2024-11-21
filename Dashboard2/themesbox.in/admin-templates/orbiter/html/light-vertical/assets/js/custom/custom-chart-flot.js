@@ -44,7 +44,7 @@ $(document).ready(function() {
         series: {
             shadowSize: 0
         },
-        colors: ["#0080ff"],
+        colors: ["#B78509f"],
         grid: {
             color: "rgba(0,0,0,0.1)",
             borderWidth: 1,
@@ -75,7 +75,7 @@ $(document).ready(function() {
     ];
     var options = {
         canvas: true,
-        colors: ["#0080ff","#18d26b"],
+        colors: ["#B78509f","#18d26b"],
         grid: {
             color: "rgba(0,0,0,0.1)",
             borderWidth: 1,
@@ -191,7 +191,7 @@ $(document).ready(function() {
             tickColor: 'rgba(0,0,0,0.05)',
             font: { color: "#8A98AC" }
         },
-        colors: ["#0080ff", "#0080ff"],
+        colors: ["#B78509f", "#B78509f"],
         labelBoxBorderColor: "#fc4f68",
         grid: {
             color: "rgba(0,0,0,0.1)",
@@ -229,7 +229,7 @@ $(document).ready(function() {
                 barWidth: 0.6
             }
         },
-        colors: ["#0080ff", "#18d26b", "#d4d8de"],
+        colors: ["#B78509f", "#18d26b", "#d4d8de"],
         grid: {
             color: "rgba(0,0,0,0.1)",
             borderWidth: 1,
@@ -285,7 +285,7 @@ $(document).ready(function() {
         data: seriesTypeData6,
         lines: { show: true, steps: true }
     }], {
-        colors: ["#0080ff", "#d4d8de", "#18d26b", "#ff3f3f", "#ffa800", "#00b8d4"],
+        colors: ["#B78509f", "#d4d8de", "#18d26b", "#ff3f3f", "#ffa800", "#00b8d4"],
         grid: {
             color: "rgba(0,0,0,0.1)",
             borderWidth: 1,
@@ -360,7 +360,7 @@ $(document).ready(function() {
         errorData4_errors[i] = errorData4[i].concat(errorData4_errors[i])
     }
     var errorData = [
-        {color: "#0080ff", points: errorData1_points, data: errorData1, label: "Series A"}, 
+        {color: "#B78509f", points: errorData1_points, data: errorData1, label: "Series A"}, 
         {color: "#ff3f3f",  points: errorData2_points, data: errorData2, label: "Series B"},
         {color: "#18d26b", lines: {show: true}, points: errorData3_points, data: errorData3, label: "Series C"},
         {color: "#d4d8de", bars: {show: true, align: "center", barWidth: 0.25}, data: errorData4, label: "Series D"},
@@ -400,7 +400,7 @@ $(document).ready(function() {
     });
     /* -- Flot - Pie Chart -- */ 
     var pieData = [
-         { label: "Series A",  data: 40, color: "#0080ff"},
+         { label: "Series A",  data: 40, color: "#B78509f"},
          { label: "Series B",  data: 35, color: "#18d26b"},
          { label: "Series C",  data: 25, color: "#d4d8de"}
         ];
@@ -427,7 +427,7 @@ $(document).ready(function() {
     });
     /* -- Flot - Donut Chart -- */ 
     var donutData = [
-         { label: "Series A",  data: 40, color: "#0080ff"},
+         { label: "Series A",  data: 40, color: "#B78509f"},
          { label: "Series B",  data: 35, color: "#18d26b"},
          { label: "Series C",  data: 25, color: "#e9eff9"}
         ];

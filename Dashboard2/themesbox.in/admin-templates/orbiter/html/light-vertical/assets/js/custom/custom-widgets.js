@@ -22,7 +22,7 @@ $(document).ready(function() {
         dataLabels: {
             enabled: false
         },
-        colors: ['#0080ff', '#d4d8de'],
+        colors: ['#B78509f', '#d4d8de'],
         series: [60, 40],
         legend: {
             show: false,

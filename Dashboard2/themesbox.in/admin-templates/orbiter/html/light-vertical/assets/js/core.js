@@ -58,21 +58,21 @@ $(document).ready(function() {
     window.addEventListener('resize', mediaSize, false);
     /* -- Switchery -- */
     var setting_first = document.querySelector('.js-switch-setting-first');
-    var switchery = new Switchery(setting_first, { color: '#0080ff', size: 'small' });
+    var switchery = new Switchery(setting_first, { color: '#B78509f', size: 'small' });
     var setting_second = document.querySelector('.js-switch-setting-second');
-    var switchery = new Switchery(setting_second, { color: '#0080ff', size: 'small' });
+    var switchery = new Switchery(setting_second, { color: '#B78509f', size: 'small' });
     var setting_third = document.querySelector('.js-switch-setting-third');
-    var switchery = new Switchery(setting_third, { color: '#0080ff', size: 'small' });
+    var switchery = new Switchery(setting_third, { color: '#B78509f', size: 'small' });
     var setting_fourth = document.querySelector('.js-switch-setting-fourth');
-    var switchery = new Switchery(setting_fourth, { color: '#0080ff', size: 'small' });
+    var switchery = new Switchery(setting_fourth, { color: '#B78509f', size: 'small' });
     var setting_fifth = document.querySelector('.js-switch-setting-fifth');
-    var switchery = new Switchery(setting_fifth, { color: '#0080ff', size: 'small' });
+    var switchery = new Switchery(setting_fifth, { color: '#B78509f', size: 'small' });
     var setting_sixth = document.querySelector('.js-switch-setting-sixth');
-    var switchery = new Switchery(setting_sixth, { color: '#0080ff', size: 'small' });
+    var switchery = new Switchery(setting_sixth, { color: '#B78509f', size: 'small' });
     var setting_seventh = document.querySelector('.js-switch-setting-seventh');
-    var switchery = new Switchery(setting_seventh, { color: '#0080ff', size: 'small' });
+    var switchery = new Switchery(setting_seventh, { color: '#B78509f', size: 'small' });
     var setting_eightth = document.querySelector('.js-switch-setting-eightth');
-    var switchery = new Switchery(setting_eightth, { color: '#0080ff', size: 'small' });
+    var switchery = new Switchery(setting_eightth, { color: '#B78509f', size: 'small' });
     /* -- Bootstrap Popover -- */
     $('[data-toggle="popover"]').popover();
     /* -- Bootstrap Tooltip -- */

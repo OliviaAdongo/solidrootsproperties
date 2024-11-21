@@ -25,7 +25,7 @@ $(document).ready(function() {
         stroke: {
             curve: 'smooth',
         },
-        colors: ['#0080ff', '#d4d8de'],
+        colors: ['#B78509f', '#d4d8de'],
         series: [{
             name: 'Inward',
             data: [31, 40, 28, 51, 42, 109, 100]
@@ -89,7 +89,7 @@ $(document).ready(function() {
             width: 2,
             colors: ['transparent']
         },
-        colors: ['#0080ff', '#d4d8de'],
+        colors: ['#B78509f', '#d4d8de'],
         series: [{
             name: 'Net Profit',
             data: [44, 55, 57, 56, 61, 58]
@@ -150,7 +150,7 @@ $(document).ready(function() {
         dataLabels: {
             enabled: false
         },
-        colors: ['#0080ff', '#d4d8de'],
+        colors: ['#B78509f', '#d4d8de'],
         series: [60, 40],
         legend: {
             show: false,
@@ -188,7 +188,7 @@ $(document).ready(function() {
                 }
             }
         },
-        colors: ['#0080ff', '#18d26b','#ffa800', '#d4d8de'],
+        colors: ['#B78509f', '#18d26b','#ffa800', '#d4d8de'],
         series: [44, 55, 67, 83],
         labels: ['News', 'Media', 'Ads', 'Others'],   
     }
