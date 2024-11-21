@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
 // define a root/default route
-// Configuring the database
+// Configuring the database 
 const dbConfig = require('./config/db.config.js');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
