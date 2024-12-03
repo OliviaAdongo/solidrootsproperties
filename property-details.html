@@ -35,6 +35,9 @@
       .property-details-wrap {
         margin-top: 50px;
       }
+      a{
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -176,16 +179,16 @@
                 <div class="property-details">
                   <div class="property-title">
                     <h2 id="propertyTitle">Loading...</h2>
-                    <p class="property-price text-muted" id="propertyPrice">
+                    <p class="property-price" id="propertyPrice">
                       Loading...
                     </p>
                   </div>
-                  <div id="propertyImages"></div>
+                  <div id="propertyImages" class="property-img"></div>
                   <div class="property-desc mt-4">
                     <p id="propertyDescription">Loading...</p>
                   </div>
                   <div class="property-details-list mt-4">
-                    <ul class="list-unstyled">
+                    <ul class="property-features list-style">
                       <li id="propertyCategory">Loading...</li>
                       <li id="propertyStatus">Loading...</li>
                       <li id="propertyAvailability">Loading...</li>
@@ -194,7 +197,7 @@
                 </div>
               </div>
               <div class="col-xl-4">
-                <a href="listings-two.html" class="btn style1 mt-4"
+                <a href="listings-two.html" class="btn style1 mt-4" style="color: white;"
                   >Back to Listings</a
                 >
               </div>
@@ -293,7 +296,7 @@
                       referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
                   </div>
-                </div>
+                </div>  
               </div>
             </div>
           </div>
