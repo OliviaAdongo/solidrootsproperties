@@ -1,1118 +1,833 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <!-- Mirrored from templates.WorkingWave.com/fela/default/listings-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 08:26:13 GMT -->
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Mirrored from templates.WorkingWave.com/fela/default/listings-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 08:26:13 GMT -->
 
-    <!-- Link of CSS files -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/flaticon.css" />
-    <link rel="stylesheet" href="assets/css/remixicon.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/jquery-ui-min.css" />
-    <link rel="stylesheet" href="assets/css/odometer.min.css" />
-    <link rel="stylesheet" href="assets/css/aos.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="assets/css/dark-theme.css" />
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SolidRoots Properties</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png"
-    />
-    <style type="text/css">
-      body {
-        background-color: #f5f4f5;
-        margin-top: 20px;
-      }
+  <!-- Link of CSS files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/flaticon.css" />
+  <link rel="stylesheet" href="assets/css/remixicon.css" />
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui-min.css" />
+  <link rel="stylesheet" href="assets/css/odometer.min.css" />
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/dark-theme.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-      /* Tr Job Post */
+  <title>SolidRoots Properties</title>
 
-      .job-item {
-        background-color: #fff;
-      }
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-      .job-tab .nav-tabs {
-        margin-bottom: 60px;
-        border-bottom: 0;
-      }
+  <link rel="icon" type="image/png"
+    href="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png" />
+  <style type="text/css">
+    body {
+      background-color: #f5f4f5;
+      margin-top: 20px;
+    }
 
-      .job-tab .nav-tabs > li {
-        float: none;
-        display: inline;
-      }
+    /* Tr Job Post */
 
-      .job-tab .nav-tabs li {
-        margin-right: 15px;
-      }
+    .job-item {
+      background-color: #fff;
+    }
 
-      .job-tab .nav-tabs li:last-child {
-        margin-right: 0;
-      }
+    .job-tab .nav-tabs {
+      margin-bottom: 60px;
+      border-bottom: 0;
+    }
 
-      .job-tab .nav-tabs {
-        position: relative;
-        z-index: 1;
-        display: inline-block;
-      }
+    .job-tab .nav-tabs>li {
+      float: none;
+      display: inline;
+    }
 
-      .job-tab .nav-tabs:after {
-        position: absolute;
-        content: "";
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #fff;
-        z-index: -1;
-      }
+    .job-tab .nav-tabs li {
+      margin-right: 15px;
+    }
 
-      .job-tab .nav-tabs > li a {
-        display: inline-block;
-        background-color: #fff;
-        border: none;
-        border-radius: 10px;
-        font-size: 14px;
-        color: #000;
-        padding: 5px 30px;
-      }
+    .job-tab .nav-tabs li:last-child {
+      margin-right: 0;
+    }
 
-      .job-tab .nav-tabs > li > a.active,
-      .job-tab .nav-tabs > li a.active > :focus,
-      .job-tab .nav-tabs > li > a.active:hover,
-      .job-tab .nav-tabs > li > a:hover {
-        border: none;
-        background-color: #b78509;
-        color: #fff;
-      }
+    .job-tab .nav-tabs {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+    }
 
-      .job-item {
-        border-radius: 3px;
-        position: relative;
-        margin-bottom: 30px;
-        z-index: 1;
-      }
+    .job-tab .nav-tabs:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      z-index: -1;
+    }
 
-      .job-item .btn.btn-primary {
-        text-transform: capitalize;
-      }
+    .job-tab .nav-tabs>li a {
+      display: inline-block;
+      background-color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #000;
+      padding: 5px 30px;
+    }
 
-      .job-item .job-info {
-        font-size: 14px;
-        color: #000;
-        overflow: hidden;
-        padding: 40px 25px 20px;
-      }
+    .job-tab .nav-tabs>li>a.active,
+    .job-tab .nav-tabs>li a.active> :focus,
+    .job-tab .nav-tabs>li>a.active:hover,
+    .job-tab .nav-tabs>li>a:hover {
+      border: none;
+      background-color: #b78509;
+      color: #fff;
+    }
 
-      .job-info .company-logo {
-        margin-bottom: 30px;
-      }
+    .job-item {
+      border-radius: 3px;
+      position: relative;
+      margin-bottom: 30px;
+      z-index: 1;
+    }
 
-      .job-info .tr-title {
-        margin-bottom: 15px;
-      }
+    .job-item .btn.btn-primary {
+      text-transform: capitalize;
+    }
 
-      .job-info .tr-title span {
-        font-size: 14px;
-        display: block;
-      }
+    .job-item .job-info {
+      font-size: 14px;
+      color: #000;
+      overflow: hidden;
+      padding: 40px 25px 20px;
+    }
 
-      .job-info .tr-title a {
-        color: #000;
-      }
+    .job-info .company-logo {
+      margin-bottom: 30px;
+    }
 
-      .job-info .tr-title a:hover {
-        color: #b78509;
-      }
+    .job-info .tr-title {
+      margin-bottom: 15px;
+    }
 
-      .job-info ul {
-        margin-bottom: 30px;
-      }
+    .job-info .tr-title span {
+      font-size: 14px;
+      display: block;
+    }
 
-      .job-meta li,
-      .job-meta li a {
-        color: #646464;
-      }
+    .job-info .tr-title a {
+      color: #000;
+    }
 
-      .job-meta li a:hover {
-        color: #b78509;
-      }
+    .job-info .tr-title a:hover {
+      color: #b78509;
+    }
 
-      .job-meta li {
-        font-size: 12px;
-        margin-bottom: 10px;
-      }
+    .job-info ul {
+      margin-bottom: 30px;
+    }
 
-      .job-meta li span i {
-        color: #000;
-      }
+    .job-meta li,
+    .job-meta li a {
+      color: #646464;
+    }
 
-      .job-meta li i {
-        margin-right: 15px;
-      }
+    .job-meta li a:hover {
+      color: #b78509;
+    }
 
-      .job-item .time {
-        position: relative;
-      }
+    .job-meta li {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
 
-      .job-item .time:after {
-        position: absolute;
-        content: "";
-        bottom: 35px;
-        left: -50px;
-        width: 150%;
-        height: 1px;
-        background-color: #f5f4f5;
-        z-index: -1;
-      }
+    .job-meta li span i {
+      color: #000;
+    }
 
-      .job-item:hover .time,
-      .job-item:hover .time:after {
-        opacity: 0;
-      }
+    .job-meta li i {
+      margin-right: 15px;
+    }
 
-      .job-item .time span {
-        font-size: 12px;
-        color: #bebebe;
-        line-height: 25px;
-      }
+    .job-item .time {
+      position: relative;
+    }
 
-      .job-item .btn.btn-primary,
-      .role .btn.btn-primary,
-      .job-item .time a span {
-        padding: 5px 10px;
-        border-radius: 4px;
-        line-height: 10px;
-        font-size: 12px;
-      }
+    .job-item .time:after {
+      position: absolute;
+      content: "";
+      bottom: 35px;
+      left: -50px;
+      width: 150%;
+      height: 1px;
+      background-color: #f5f4f5;
+      z-index: -1;
+    }
 
-      .job-item .time a span {
-        color: #fff;
-        background-color: #f1592a;
-        border-color: #f1592a;
-      }
+    .job-item:hover .time,
+    .job-item:hover .time:after {
+      opacity: 0;
+    }
 
-      .job-item .time a span.part-time {
-        background-color: #00aeef;
-        border-color: #00aeef;
-      }
+    .job-item .time span {
+      font-size: 12px;
+      color: #bebebe;
+      line-height: 25px;
+    }
 
-      .job-item .time a span.freelance {
-        background-color: #92278f;
-        border-color: #92278f;
-      }
+    .job-item .btn.btn-primary,
+    .role .btn.btn-primary,
+    .job-item .time a span {
+      padding: 5px 10px;
+      border-radius: 4px;
+      line-height: 10px;
+      font-size: 12px;
+    }
 
-      .job-item .item-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        background-color: #b78509;
-        color: #fff;
-        opacity: 0;
-        -webkit-transition: all 800ms;
-        -moz-transition: all 800ms;
-        -ms-transition: all 800ms;
-        -o-transition: all 800ms;
-        transition: all 800ms;
-      }
+    .job-item .time a span {
+      color: #fff;
+      background-color: #f1592a;
+      border-color: #f1592a;
+    }
 
-      .job-item:hover .item-overlay {
-        opacity: 1;
-      }
+    .job-item .time a span.part-time {
+      background-color: #00aeef;
+      border-color: #00aeef;
+    }
 
-      .item-overlay .job-info {
-        padding: 45px 25px 40px;
-        overflow: hidden;
-      }
+    .job-item .time a span.freelance {
+      background-color: #92278f;
+      border-color: #92278f;
+    }
 
-      .item-overlay .btn.btn-primary {
-        background-color: #007bd4;
-        border-color: #007bd4;
-        margin-bottom: 10px;
-      }
+    .job-item .item-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      background-color: #b78509;
+      color: #fff;
+      opacity: 0;
+      -webkit-transition: all 800ms;
+      -moz-transition: all 800ms;
+      -ms-transition: all 800ms;
+      -o-transition: all 800ms;
+      transition: all 800ms;
+    }
 
-      .item-overlay .job-info,
-      .item-overlay .job-info ul li,
-      .item-overlay .job-info ul li i,
-      .item-overlay .job-info .tr-title a {
-        color: #fff;
-      }
+    .job-item:hover .item-overlay {
+      opacity: 1;
+    }
 
-      .job-social {
-        margin-top: 35px;
-      }
+    .item-overlay .job-info {
+      padding: 45px 25px 40px;
+      overflow: hidden;
+    }
 
-      .job-social li {
-        float: left;
-      }
+    .item-overlay .btn.btn-primary {
+      background-color: #007bd4;
+      border-color: #007bd4;
+      margin-bottom: 10px;
+    }
 
-      .job-social li + li {
-        margin-left: 15px;
-      }
+    .item-overlay .job-info,
+    .item-overlay .job-info ul li,
+    .item-overlay .job-info ul li i,
+    .item-overlay .job-info .tr-title a {
+      color: #fff;
+    }
 
-      .job-social li a i {
-        margin-right: 0;
-        font-size: 14px;
-      }
+    .job-social {
+      margin-top: 35px;
+    }
 
-      .job-social li a {
-        width: 35px;
-        height: 35px;
-        text-align: center;
-        display: block;
-        background-color: #007bd4;
-        line-height: 35px;
-        border-radius: 100%;
-        border: 1px solid #007bd4;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-      }
+    .job-social li {
+      float: left;
+    }
 
-      .job-social li:last-child a {
-        background-color: #fff;
-      }
+    .job-social li+li {
+      margin-left: 15px;
+    }
 
-      .job-social li:last-child a i {
-        color: #b78509;
-      }
+    .job-social li a i {
+      margin-right: 0;
+      font-size: 14px;
+    }
 
-      .job-social li a:before {
-        position: absolute;
-        content: "";
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        border-radius: 100%;
-        background-color: #b78509;
-        -webkit-transform: scale(0);
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        transform: scale(0);
-      }
+    .job-social li a {
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      display: block;
+      background-color: #007bd4;
+      line-height: 35px;
+      border-radius: 100%;
+      border: 1px solid #007bd4;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
 
-      .job-social li a:hover:before {
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        padding: 5px;
-      }
+    .job-social li:last-child a {
+      background-color: #fff;
+    }
 
-      .job-social li a:hover {
-        border-color: #fff;
-      }
+    .job-social li:last-child a i {
+      color: #b78509;
+    }
 
-      .job-social li a:hover i {
-        color: #fff;
-      }
+    .job-social li a:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: 100%;
+      background-color: #b78509;
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+    }
 
-      .tr-list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-    </style>
-  </head>
-  <body>
-    <!--Preloader starts-->
-    <div class="loader js-preloader">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <!--Preloader ends-->
+    .job-social li a:hover:before {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      padding: 5px;
+    }
 
-    <!-- Theme Switcher Start -->
-    <div class="switch-theme-mode">
-      <label id="switch" class="switch">
-        <input type="checkbox" onchange="toggleTheme()" id="slider" />
-      </label>
-    </div>
-    <!-- Theme Switcher End -->
-    <div class="page-wrapper">
-      <!-- Header Section Start -->
-      <header class="header-wrap style1">
+    .job-social li a:hover {
+      border-color: #fff;
+    }
+
+    .job-social li a:hover i {
+      color: #fff;
+    }
+
+    .tr-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Preloader starts-->
+  <div class="loader js-preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <!--Preloader ends-->
+
+  <!-- Theme Switcher Start -->
+  <div class="switch-theme-mode">
+    <label id="switch" class="switch">
+      <input type="checkbox" onchange="toggleTheme()" id="slider" />
+    </label>
+  </div>
+  <!-- Theme Switcher End -->
+  <div class="page-wrapper">
+    <!-- Header Section Start -->
+    <header class="header-wrap style1">
+      <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <a class="navbar-brand" href="index.html">
+            <img class="logo-light" src="assets/img/solidroots_properties_logo_c3-2-removebg-preview.png" alt="logo" />
+            <img class="logo-dark" src="assets/img/logo-white.png" alt="logo" />
+          </a>
+          <div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
+            <div class="menu-close d-lg-none">
+              <a href="javascript:void(0)"> <i class="ri-close-line"></i></a>
+            </div>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link"> About Us </a>
+              </li>
+              <li class="nav-item">
+                <a href="listings-two.html" class="nav-link active">Listing
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="blog.html" class="nav-link"> Insights </a>
+              </li>
+              <li class="nav-item">
+                <a href="services.html" class="nav-link">Services </a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact Us</a>
+              </li>
+              <li class="nav-item d-lg-none">
+                <div>
+                  <ul class="social-profile list-style style1">
+                    <li>
+                      <a target="_blank" href="https://www.facebook.com/profile.php?id=61568340275308&mibextid=ZbWKwL">
+                        <i class="ri-facebook-fill"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://x.com/SolidrootsP?t=i8EzncFp_L6AF3SPR-K4Fw&s=09">
+                        <i class="ri-twitter-fill"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://instagram.com/">
+                        <i class="ri-instagram-line"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.linkedin.com/company/solidroots-properties/">
+                        <i class="ri-linkedin-fill"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="others-options md-none">
+              <div class="header-btn">
+                <div>
+                  <ul class="social-profile list-style style1">
+                    <li>
+                      <a target="_blank" href="https://www.facebook.com/profile.php?id=61568340275308&mibextid=ZbWKwL">
+                        <i class="ri-facebook-fill"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://x.com/SolidrootsP?t=i8EzncFp_L6AF3SPR-K4Fw&s=09">
+                        <i class="ri-twitter-fill"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://instagram.com/">
+                        <i class="ri-instagram-line"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.linkedin.com/company/solidroots-properties/">
+                        <i class="ri-linkedin-fill"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="mobile-bar-wrap">
+          <div class="mobile-menu d-lg-none">
+            <a href="javascript:void(0)"><i class="ri-menu-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Content Wrapper Start -->
+    <div class="content-wrapper">
+      <!-- Breadcrumb Start -->
+      <div class="breadcrumb-wrap bg-f br-2">
         <div class="container">
-          <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="index.html">
-              <img
-                class="logo-light"
-                src="assets/img/solidroots_properties_logo_c3-2-removebg-preview.png"
-                alt="logo"
-              />
-              <img
-                class="logo-dark"
-                src="assets/img/logo-white.png"
-                alt="logo"
-              />
-            </a>
-            <div
-              class="collapse navbar-collapse main-menu-wrap"
-              id="navbarSupportedContent"
-            >
-              <div class="menu-close d-lg-none">
-                <a href="javascript:void(0)"> <i class="ri-close-line"></i></a>
-              </div>
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="about.html" class="nav-link"> About Us </a>
-                </li>
-                <li class="nav-item">
-                  <a href="listings-two.html" class="nav-link active"
-                    >Listing
-                  </a>
-                </li>
+          <div class="breadcrumb-title">
+            <h2>Listing</h2>
+            <ul class="breadcrumb-menu list-style">
+              <li><a href="index.html">Home </a></li>
+              <li>Listing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Breadcrumb End -->
+      <div class="row mt-20">
+        <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+          <div class="section-title style1 text-center mb-40">
+            <h2>Our Property Listings</h2>
+            <p>Click below to view our collection</p>
+          </div>
+        </div>
+      </div>
+      <div class="tr-job-posted section-padding mt-20">
+        <div class="container">
+          <div class="job-tab text-center">
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+              <li role="presentation" class="active">
+                <a class="active show btn style2" href="#hot-jobs" aria-controls="hot-jobs" role="tab" data-toggle="tab"
+                  aria-selected="true">Residential Property</a>
+              </li>
 
-                <li class="nav-item">
-                  <a href="blog.html" class="nav-link"> Insights </a>
-                </li>
-                <li class="nav-item">
-                  <a href="services.html" class="nav-link">Services </a>
-                </li>
-                <li class="nav-item">
-                  <a href="contact.html" class="nav-link">Contact Us</a>
-                </li>
-                <li class="nav-item d-lg-none">
-                  <div>
-                    <ul class="social-profile list-style style1">
+              <li role="presentation">
+                <a href="#popular-jobs" aria-controls="popular-jobs" role="tab" data-toggle="tab" class="btn style2"
+                  aria-selected="false">Land</a>
+              </li>
+              <li role="presentation">
+                <a href="#recent-jobs" aria-controls="recent-jobs" role="tab" data-toggle="tab" class="btn style2"
+                  aria-selected="false">Commercial Property</a>
+              </li>
+            </ul>
+            <div class="tab-content text-left">
+              <div role="tabpanel" class="tab-pane fade active show" id="hot-jobs">
+                <section class="listing-wrap ptb-20">
+                  <div class="container">
+                    <div class="row align-items-center mb-25"></div>
+                    <div class="row">
+
+                      <!-- RESIDENTIAL PROPERTIES FETCHING -->
+
+
+
+
+
+                    </div>
+
+
+                    <section class="property-listing pt-100 pb-75">
+                      <div class="container">
+                        <div class="row" id="propertyCards">
+                          <!-- Property cards will be dynamically inserted here -->
+                        </div>
+                      </div>
+                    </section>
+
+                    <script>
+                      const apiUrl = "http://localhost:3000/api/residentialproperties"; // Replace with your backend endpoint
+
+                      // Fetch and display properties dynamically in cards
+                      const fetchProperties = async () => {
+                        try {
+                          const response = await axios.get(apiUrl);
+                          const properties = response.data;
+                          const propertyCards = document.getElementById("propertyCards");
+
+                          propertyCards.innerHTML = properties.map(property => `
+          <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="property-card style2">
+              <div class="property-img-slider owl-carousel">
+                ${property.images.map(img => `<img src="${img}" alt="Property Image" />`).join('')}
+              </div>
+             
+              <div class="property-info">
+                <div class="property-status-wrap">
+                  <h3><a href="listing-details.html">${property.location}</a></h3>
+                  <span class="property-status">${property.category}</span>
+                  <p class="property-price">${property.price}</p>
+                  <span class="property-status">${property.status}</span>
+                </div>
+                <p><i class="flaticon-location"></i>${property.location}</p>
+                <ul class="property-metainfo list-style">
+                  <li><i class="flaticon-double-bed"></i>5</li>
+                  <li><i class="flaticon-bath-tub"></i>0</li>
+                  <li><i class="flaticon-square"></i>3100 sqft</li>
+                </ul>
+                <a href="listing-details.html" class="btn style1 mt-10">See Details</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+                          // Initialize Owl Carousel
+                          // $(".property-img-slider").owlCarousel({
+                          //   loop: true,
+                          //   margin: 10,
+                          //   nav: true,
+                          //   dots: true,
+                          //   items: 10
+                          // });
+
+                        } catch (error) {
+                          console.error("Error fetching properties:", error);
+                        }
+                      };
+
+                      // Initial fetch
+                      fetchProperties();
+                    </script>
+
+
+                    <ul class="page-nav list-style mt-10">
                       <li>
-                        <a
-                          target="_blank"
-                          href="https://www.facebook.com/profile.php?id=61568340275308&mibextid=ZbWKwL"
-                        >
-                          <i class="ri-facebook-fill"></i>
-                        </a>
+                        <a href="listings-two.html"><i class="flaticon-back"></i></a>
                       </li>
                       <li>
-                        <a
-                          target="_blank"
-                          href="https://x.com/SolidrootsP?t=i8EzncFp_L6AF3SPR-K4Fw&s=09"
-                        >
-                          <i class="ri-twitter-fill"></i>
-                        </a>
+                        <a class="active" href="listings-two.html">1</a>
                       </li>
+                      <li><a href="listings-two.html">2</a></li>
+                      <li><a href="listings-two.html">3</a></li>
                       <li>
-                        <a target="_blank" href="https://instagram.com/">
-                          <i class="ri-instagram-line"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          target="_blank"
-                          href="https://www.linkedin.com/company/solidroots-properties/"
-                        >
-                          <i class="ri-linkedin-fill"></i>
-                        </a>
+                        <a href="listings-two.html"><i class="flaticon-next-1"></i></a>
                       </li>
                     </ul>
                   </div>
-                </li>
-              </ul>
-              <div class="others-options md-none">
-                <div class="header-btn">
-                  <div>
-                    <ul class="social-profile list-style style1">
-                      <li>
-                        <a
-                          target="_blank"
-                          href="https://www.facebook.com/profile.php?id=61568340275308&mibextid=ZbWKwL"
-                        >
-                          <i class="ri-facebook-fill"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          target="_blank"
-                          href="https://x.com/SolidrootsP?t=i8EzncFp_L6AF3SPR-K4Fw&s=09"
-                        >
-                          <i class="ri-twitter-fill"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a target="_blank" href="https://instagram.com/">
-                          <i class="ri-instagram-line"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          target="_blank"
-                          href="https://www.linkedin.com/company/solidroots-properties/"
-                        >
-                          <i class="ri-linkedin-fill"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                </section>
               </div>
-            </div>
-          </nav>
-          <div class="mobile-bar-wrap">
-            <div class="mobile-menu d-lg-none">
-              <a href="javascript:void(0)"><i class="ri-menu-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- Header Section End -->
+              <!-- /.tab-pane -->
 
-      <!-- Content Wrapper Start -->
-      <div class="content-wrapper">
-        <!-- Breadcrumb Start -->
-        <div class="breadcrumb-wrap bg-f br-2">
-          <div class="container">
-            <div class="breadcrumb-title">
-              <h2>Listing</h2>
-              <ul class="breadcrumb-menu list-style">
-                <li><a href="index.html">Home </a></li>
-                <li>Listing</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Breadcrumb End -->
-        <div class="row mt-20">
-          <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-            <div class="section-title style1 text-center mb-40">
-              <h2>Our Property Listings</h2>
-              <p>Click below to view our collection</p>
-            </div>
-          </div>
-        </div>
-        <div class="tr-job-posted section-padding mt-20">
-          <div class="container">
-            <div class="job-tab text-center">
-              <ul class="nav nav-tabs justify-content-center" role="tablist">
-                <li role="presentation" class="active">
-                  <a
-                    class="active show btn style2"
-                    href="#hot-jobs"
-                    aria-controls="hot-jobs"
-                    role="tab"
-                    data-toggle="tab"
-                    aria-selected="true"
-                    >Residential Property</a
-                  >
-                </li>
+              <div role="tabpanel" class="tab-pane fade in" id="recent-jobs">
+                <section class="listing-wrap ptb-20">
+                  <div class="container">
+                    <div class="row">
 
-                <li role="presentation">
-                  <a
-                    href="#popular-jobs"
-                    aria-controls="popular-jobs"
-                    role="tab"
-                    data-toggle="tab"
-                    class="btn style2"
-                    aria-selected="false"
-                    >Land</a
-                  >
-                </li>
-                <li role="presentation">
-                  <a
-                    href="#recent-jobs"
-                    aria-controls="recent-jobs"
-                    role="tab"
-                    data-toggle="tab"
-                    class="btn style2"
-                    aria-selected="false"
-                    >Commercial Property</a
-                  >
-                </li>
-              </ul>
-              <div class="tab-content text-left">
-                <div
-                  role="tabpanel"
-                  class="tab-pane fade active show"
-                  id="hot-jobs"
-                >
-                  <section class="listing-wrap ptb-20">
-                    <div class="container">
-                      <div class="row align-items-center mb-25"></div>
-                      <div class="row">
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            <div class="property-card style2">
-                              <div class="property-img-slider owl-carousel">
-                                <img
-                                  src="assets/img/property/property-10.jpg"
-                                  alt="Image"
-                                />
-  
-                                <img
-                                  src="assets/img/property/property-1.jpg"
-                                  alt="Image"
-                                />
-                                <img
-                                  src="assets/img/property/property-11.jpg"
-                                  alt="Image"
-                                />
-                                <img
-                                  src="assets/img/property/property-1.jpg"
-                                  alt="Image"
-                                />
-                                <img
-                                  src="assets/img/property/property-11.jpg"
-                                  alt="Image"
-                                />
-                              </div>
-                              <div class="property-info">
-                                <div class="property-status-wrap">
-                                  <h3>
-                                    <a href="listing-details.html"
-                                      >Villa in Mombasa</a
-                                    >
-                                  </h3>
-                                  <span class="property-status">For Sale</span>
-  
-                                  <p class="property-price">Ksh 34,900,000</p>
-                                  <span class="property-status">Available</span>
-                                </div>
-  
-                                <p><i class="flaticon-location"></i>Lamu</p>
-                                <ul class="property-metainfo list-style">
-                                  <li><i class="flaticon-double-bed"></i>5</li>
-                                  <li><i class="flaticon-bath-tub"></i>0</li>
-                                  <li>
-                                    <i class="flaticon-square"></i>3100 sqft
-                                  </li>
-                                 
-                                </ul>
-                                <a href="listing-details.html" class="btn style1 mt-10"
-                                >See Details</a
-                              >
-                              </div>
-                            </div>
+                      <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="property-card style2">
+                          <div class="property-img-slider owl-carousel">
+                            <img src="assets/img/property/property-10.jpg" alt="Image" />
+
+                            <img src="assets/img/property/property-1.jpg" alt="Image" />
+                            <img src="assets/img/property/property-11.jpg" alt="Image" />
+                            <img src="assets/img/property/property-1.jpg" alt="Image" />
+                            <img src="assets/img/property/property-11.jpg" alt="Image" />
                           </div>
-                      
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-20.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Sale</span>
-                            </div>
-                            <div class="property-info">
+                          <div class="property-info">
+                            <div class="property-status-wrap">
                               <h3>
-                                <a href="listing-details.html"
-                                  >Luxury &amp; Modern Villa</a
-                                >
+                                <a href="listing-details.html">Hope Business Center</a>
                               </h3>
-                              <p><i class="flaticon-location"></i>Mombasa</p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>05</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>1300 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">
-                                $35,000/<span>month</span>
-                              </p>
+                              <span class="property-status">For Sale</span>
+
+                              <p class="property-price">Ksh 24,000,000</p>
+                              <span class="property-status">Available</span>
                             </div>
+
+                            <p><i class="flaticon-location"></i>Kitengela</p>
+                            <ul class="property-metainfo list-style">
+                              <li><i class="flaticon-double-bed"></i>0</li>
+                              <li><i class="flaticon-bath-tub"></i>0</li>
+                              <li>
+                                <i class="flaticon-square"></i>3100 sqft
+                              </li>
+
+                            </ul>
+                            <a href="listing-details.html" class="btn style1 mt-10">See Details</a>
                           </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-21.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Sale</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Villa In Luis Park</a
-                                >
-                              </h3>
-                              <p><i class="flaticon-location"></i>Kilimani</p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>06</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>3110 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">
-                                $34,900/<span>month</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-22.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Sale</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Villa For Sale</a
-                                >
-                              </h3>
-                              <p><i class="flaticon-location"></i>Kileleshwa</p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>04</li>
-                                <li><i class="flaticon-bath-tub"></i>02</li>
-                                <li>
-                                  <i class="flaticon-square"></i>1100 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">
-                                $22,000/<span>month</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-29.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Sale</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Land For Sale
-                                </a>
-                              </h3>
-                              <p><i class="flaticon-location"></i>Ngong'</p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>05</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>2300 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">$204,900</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-30.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Sale</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Apartment For Sale
-                                </a>
-                              </h3>
-                              <p>
-                                <i class="flaticon-location"></i>849 Stuart
-                                Street, Houston
-                              </p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>07</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>1200 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">
-                                $54,900/<span>month</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-31.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Sale</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Villa In Lake View</a
-                                >
-                              </h3>
-                              <p>
-                                <i class="flaticon-location"></i>1160 Horizon
-                                Circle, Pennsylvania
-                              </p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>03</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>2200 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">$24,900</p>
-                            </div>
-                          </div>
-                        </div> -->
                       </div>
-                      <ul class="page-nav list-style mt-10">
-                        <li>
-                          <a href="listings-two.html"
-                            ><i class="flaticon-back"></i
-                          ></a>
-                        </li>
-                        <li>
-                          <a class="active" href="listings-two.html">1</a>
-                        </li>
-                        <li><a href="listings-two.html">2</a></li>
-                        <li><a href="listings-two.html">3</a></li>
-                        <li>
-                          <a href="listings-two.html"
-                            ><i class="flaticon-next-1"></i
-                          ></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </section>
-                </div>
-                <!-- /.tab-pane -->
 
-                <div role="tabpanel" class="tab-pane fade in" id="recent-jobs">
-                  <section class="listing-wrap ptb-20">
-                    <div class="container">
-                      <div class="row">
-
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            <div class="property-card style2">
-                              <div class="property-img-slider owl-carousel">
-                                <img
-                                  src="assets/img/property/property-10.jpg"
-                                  alt="Image"
-                                />
-  
-                                <img
-                                  src="assets/img/property/property-1.jpg"
-                                  alt="Image"
-                                />
-                                <img
-                                  src="assets/img/property/property-11.jpg"
-                                  alt="Image"
-                                />
-                                <img
-                                  src="assets/img/property/property-1.jpg"
-                                  alt="Image"
-                                />
-                                <img
-                                  src="assets/img/property/property-11.jpg"
-                                  alt="Image"
-                                />
-                              </div>
-                              <div class="property-info">
-                                <div class="property-status-wrap">
-                                  <h3>
-                                    <a href="listing-details.html"
-                                      >Hope Business Center</a
-                                    >
-                                  </h3>
-                                  <span class="property-status">For Sale</span>
-  
-                                  <p class="property-price">Ksh 24,000,000</p>
-                                  <span class="property-status">Available</span>
-                                </div>
-  
-                                <p><i class="flaticon-location"></i>Kitengela</p>
-                                <ul class="property-metainfo list-style">
-                                  <li><i class="flaticon-double-bed"></i>0</li>
-                                  <li><i class="flaticon-bath-tub"></i>0</li>
-                                  <li>
-                                    <i class="flaticon-square"></i>3100 sqft
-                                  </li>
-                                 
-                                </ul>
-                                <a href="listing-details.html" class="btn style1 mt-10"
-                                >See Details</a
-                              >
-                              </div>
-                            </div>
-                          </div>
-                       
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-20.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Rent</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Luxury &amp; Modern Villa</a
-                                >
-                              </h3>
-                              <p><i class="flaticon-location"></i>Mombasa</p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>05</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>1300 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">
-                                $35,000/<span>month</span>
-                              </p>
-                            </div>
-                          </div>
+                      <div class="property-card style4">
+                        <div class="property-img">
+                          <img src="assets/img/property/property-20.jpg" alt="Image" />
+                          <span class="property-status">For Rent</span>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-21.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Rent</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Villa In Luis Park</a
-                                >
-                              </h3>
-                              <p><i class="flaticon-location"></i>Kilimani</p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>06</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>3110 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">
-                                $34,900/<span>month</span>
-                              </p>
-                            </div>
-                          </div>
+                        <div class="property-info">
+                          <h3>
+                            <a href="listing-details.html">Luxury &amp; Modern Villa</a>
+                          </h3>
+                          <p><i class="flaticon-location"></i>Mombasa</p>
+                          <ul class="property-metainfo list-style">
+                            <li><i class="flaticon-double-bed"></i>05</li>
+                            <li><i class="flaticon-bath-tub"></i>04</li>
+                            <li>
+                              <i class="flaticon-square"></i>1300 sqft
+                            </li>
+                          </ul>
+                          <p class="property-price">
+                            $35,000/<span>month</span>
+                          </p>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-22.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Rent</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Villa For Rent</a
-                                >
-                              </h3>
-                              <p><i class="flaticon-location"></i>Kileleshwa</p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>04</li>
-                                <li><i class="flaticon-bath-tub"></i>02</li>
-                                <li>
-                                  <i class="flaticon-square"></i>1100 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">
-                                $22,000/<span>month</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-29.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Sale</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Land For Sale
-                                </a>
-                              </h3>
-                              <p><i class="flaticon-location"></i>Ngong'</p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>05</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>2300 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">$204,900</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-30.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Rent</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Apartment For Rent
-                                </a>
-                              </h3>
-                              <p>
-                                <i class="flaticon-location"></i>849 Stuart
-                                Street, Houston
-                              </p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>07</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>1200 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">
-                                $54,900/<span>month</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style4">
-                            <div class="property-img">
-                              <img
-                                src="assets/img/property/property-31.jpg"
-                                alt="Image"
-                              />
-                              <span class="property-status">For Sale</span>
-                            </div>
-                            <div class="property-info">
-                              <h3>
-                                <a href="listing-details.html"
-                                  >Villa In Lake View</a
-                                >
-                              </h3>
-                              <p>
-                                <i class="flaticon-location"></i>1160 Horizon
-                                Circle, Pennsylvania
-                              </p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>03</li>
-                                <li><i class="flaticon-bath-tub"></i>04</li>
-                                <li>
-                                  <i class="flaticon-square"></i>2200 sqft
-                                </li>
-                              </ul>
-                              <p class="property-price">$24,900</p>
-                            </div>
-                          </div>
-                        </div> -->
                       </div>
-                      <ul class="page-nav list-style mt-10">
-                        <li>
-                          <a href="listings-two.html"
-                            ><i class="flaticon-back"></i
-                          ></a>
-                        </li>
-                        <li>
-                          <a class="active" href="listings-two.html">1</a>
-                        </li>
-                        <li><a href="listings-two.html">2</a></li>
-                        <li><a href="listings-two.html">3</a></li>
-                        <li>
-                          <a href="listings-two.html"
-                            ><i class="flaticon-next-1"></i
-                          ></a>
-                        </li>
-                      </ul>
                     </div>
-                  </section>
-                </div>
-                <!-- /.tab-pane -->
-
-                <div role="tabpanel" class="tab-pane fade in" id="popular-jobs">
-                  <section class="listing-wrap ptb-20">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                          <div class="property-card style2">
-                            <div class="property-img-slider owl-carousel">
-                              <img
-                                src="assets/img/property/property-10.jpg"
-                                alt="Image"
-                              />
-
-                              <img
-                                src="assets/img/property/property-1.jpg"
-                                alt="Image"
-                              />
-                              <img
-                                src="assets/img/property/property-11.jpg"
-                                alt="Image"
-                              />
-                              <img
-                                src="assets/img/property/property-1.jpg"
-                                alt="Image"
-                              />
-                              <img
-                                src="assets/img/property/property-11.jpg"
-                                alt="Image"
-                              />
-                            </div>
-                            <div class="property-info">
-                              <div class="property-status-wrap">
-                                <h3>
-                                  <a href="listing-details.html"
-                                    >Along_Southern_Bypass 1 acre</a
-                                  >
-                                </h3>
-                                <span class="property-status">For Sale</span>
-
-                                <p class="property-price">Asking Price 50 M</p>
-                                <span class="property-status">Available</span>
-                              </div>
-
-                              <p><i class="flaticon-location"></i>Southern Bypass</p>
-                              <ul class="property-metainfo list-style">
-                                <li><i class="flaticon-double-bed"></i>0</li>
-                                <li><i class="flaticon-bath-tub"></i>0</li>
-                                <li>
-                                  <i class="flaticon-square"></i>3100 sqft
-                                </li>
-                               
-                              </ul>
-                              <a href="listings-two.html" class="btn style1 mt-10"
-                              >See Details</a
-                            >
-                            </div>
-                          </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                      <div class="property-card style4">
+                        <div class="property-img">
+                          <img src="assets/img/property/property-21.jpg" alt="Image" />
+                          <span class="property-status">For Rent</span>
                         </div>
+                        <div class="property-info">
+                          <h3>
+                            <a href="listing-details.html">Villa In Luis Park</a>
+                          </h3>
+                          <p><i class="flaticon-location"></i>Kilimani</p>
+                          <ul class="property-metainfo list-style">
+                            <li><i class="flaticon-double-bed"></i>06</li>
+                            <li><i class="flaticon-bath-tub"></i>04</li>
+                            <li>
+                              <i class="flaticon-square"></i>3110 sqft
+                            </li>
+                          </ul>
+                          <p class="property-price">
+                            $34,900/<span>month</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                      <div class="property-card style4">
+                        <div class="property-img">
+                          <img src="assets/img/property/property-22.jpg" alt="Image" />
+                          <span class="property-status">For Rent</span>
+                        </div>
+                        <div class="property-info">
+                          <h3>
+                            <a href="listing-details.html">Villa For Rent</a>
+                          </h3>
+                          <p><i class="flaticon-location"></i>Kileleshwa</p>
+                          <ul class="property-metainfo list-style">
+                            <li><i class="flaticon-double-bed"></i>04</li>
+                            <li><i class="flaticon-bath-tub"></i>02</li>
+                            <li>
+                              <i class="flaticon-square"></i>1100 sqft
+                            </li>
+                          </ul>
+                          <p class="property-price">
+                            $22,000/<span>month</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                      <div class="property-card style4">
+                        <div class="property-img">
+                          <img src="assets/img/property/property-29.jpg" alt="Image" />
+                          <span class="property-status">For Sale</span>
+                        </div>
+                        <div class="property-info">
+                          <h3>
+                            <a href="listing-details.html">Land For Sale
+                            </a>
+                          </h3>
+                          <p><i class="flaticon-location"></i>Ngong'</p>
+                          <ul class="property-metainfo list-style">
+                            <li><i class="flaticon-double-bed"></i>05</li>
+                            <li><i class="flaticon-bath-tub"></i>04</li>
+                            <li>
+                              <i class="flaticon-square"></i>2300 sqft
+                            </li>
+                          </ul>
+                          <p class="property-price">$204,900</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                      <div class="property-card style4">
+                        <div class="property-img">
+                          <img src="assets/img/property/property-30.jpg" alt="Image" />
+                          <span class="property-status">For Rent</span>
+                        </div>
+                        <div class="property-info">
+                          <h3>
+                            <a href="listing-details.html">Apartment For Rent
+                            </a>
+                          </h3>
+                          <p>
+                            <i class="flaticon-location"></i>849 Stuart
+                            Street, Houston
+                          </p>
+                          <ul class="property-metainfo list-style">
+                            <li><i class="flaticon-double-bed"></i>07</li>
+                            <li><i class="flaticon-bath-tub"></i>04</li>
+                            <li>
+                              <i class="flaticon-square"></i>1200 sqft
+                            </li>
+                          </ul>
+                          <p class="property-price">
+                            $54,900/<span>month</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                      <div class="property-card style4">
+                        <div class="property-img">
+                          <img src="assets/img/property/property-31.jpg" alt="Image" />
+                          <span class="property-status">For Sale</span>
+                        </div>
+                        <div class="property-info">
+                          <h3>
+                            <a href="listing-details.html">Villa In Lake View</a>
+                          </h3>
+                          <p>
+                            <i class="flaticon-location"></i>1160 Horizon
+                            Circle, Pennsylvania
+                          </p>
+                          <ul class="property-metainfo list-style">
+                            <li><i class="flaticon-double-bed"></i>03</li>
+                            <li><i class="flaticon-bath-tub"></i>04</li>
+                            <li>
+                              <i class="flaticon-square"></i>2200 sqft
+                            </li>
+                          </ul>
+                          <p class="property-price">$24,900</p>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                  <ul class="page-nav list-style mt-10">
+                    <li>
+                      <a href="listings-two.html"><i class="flaticon-back"></i></a>
+                    </li>
+                    <li>
+                      <a class="active" href="listings-two.html">1</a>
+                    </li>
+                    <li><a href="listings-two.html">2</a></li>
+                    <li><a href="listings-two.html">3</a></li>
+                    <li>
+                      <a href="listings-two.html"><i class="flaticon-next-1"></i></a>
+                    </li>
+                  </ul>
+              </div>
+              </section>
+            </div>
+            <!-- /.tab-pane -->
 
-                        <!-- <div class="col-xl-4 col-lg-6 col-md-6">
+            <div role="tabpanel" class="tab-pane fade in" id="popular-jobs">
+              <section class="listing-wrap ptb-20">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                      <div class="property-card style2">
+                        <div class="property-img-slider owl-carousel">
+                          <img src="assets/img/property/property-10.jpg" alt="Image" />
+
+                          <img src="assets/img/property/property-1.jpg" alt="Image" />
+                          <img src="assets/img/property/property-11.jpg" alt="Image" />
+                          <img src="assets/img/property/property-1.jpg" alt="Image" />
+                          <img src="assets/img/property/property-11.jpg" alt="Image" />
+                        </div>
+                        <div class="property-info">
+                          <div class="property-status-wrap">
+                            <h3>
+                              <a href="listing-details.html">Along_Southern_Bypass 1 acre</a>
+                            </h3>
+                            <span class="property-status">For Sale</span>
+
+                            <p class="property-price">Asking Price 50 M</p>
+                            <span class="property-status">Available</span>
+                          </div>
+
+                          <p><i class="flaticon-location"></i>Southern Bypass</p>
+                          <ul class="property-metainfo list-style">
+                            <li><i class="flaticon-double-bed"></i>0</li>
+                            <li><i class="flaticon-bath-tub"></i>0</li>
+                            <li>
+                              <i class="flaticon-square"></i>3100 sqft
+                            </li>
+
+                          </ul>
+                          <a href="listings-two.html" class="btn style1 mt-10">See Details</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="property-card style4">
                                                     <div class="property-img">
                                                         <img src="https://images.unsplash.com/photo-1685122121737-77d1f783ad84?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGxhbmR8ZW58MHwxfDB8fHww" alt="Image">
@@ -1220,382 +935,309 @@
                                                     </div>
                                                 </div>
                                             </div> -->
-                      </div>
-                      <ul class="page-nav list-style mt-10">
-                        <li>
-                          <a href="listings-two.html"
-                            ><i class="flaticon-back"></i
-                          ></a>
-                        </li>
-                        <li>
-                          <a class="active" href="listings-two.html">1</a>
-                        </li>
-                        <li><a href="listings-two.html">2</a></li>
-                        <li><a href="listings-two.html">3</a></li>
-                        <li>
-                          <a href="listings-two.html"
-                            ><i class="flaticon-next-1"></i
-                          ></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </section>
-                </div>
-                <!-- /.tab-pane -->
-              </div>
-            </div>
-            <!-- /.job-tab -->
-          </div>
-          <!-- /.container -->
-        </div>
-        <!-- Listing section start -->
-       
-      </div>
-      <!-- Content wrapper end -->
-
-      <!-- Footer Section Start -->
-      <footer class="footer-wrap style2 pt-100">
-        <img
-          src="assets/img/footer-map.png"
-          alt="Image"
-          class="footer-shape-one"
-        />
-        <div class="footer-top">
-          <div class="container">
-            <div class="row pb-75">
-              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 pe-xl-5">
-                <div class="footer-widget">
-                  <a href="index.html" class="footer-logo">
-                    <img
-                      src="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png"
-                      alt="Image"
-                    />
-                  </a>
-                 
-                 
-              </div>
-              <div class="col-xl-2 col-lg-6 col-md-6 col-sm-6">
-                <div class="footer-widget">
-                  <h3 class="footer-widget-title">Popular Links</h3>
-                  <ul class="footer-menu list-style">
-                    <li>
-                      <a href="listings-two.html" target="_blank">
-                        <i class="ri-arrow-right-s-line"></i>
-                        Listings
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 ps-xl-5">
-                <div class="footer-widget">
-                  <h3 class="footer-widget-title">Quick Links</h3>
-                  <ul class="footer-menu list-style">
-                    <li>
-                      <a href="about.html" target="_blank">
-                        <i class="ri-arrow-right-s-line"></i>
-                        About Us
-                      </a>
-                    </li>
-                   
-                    <li>
-                      <a href="contact.html" target="_blank">
-                        <i class="ri-arrow-right-s-line"></i>
-                        Contact Us
-                      </a>
-                    </li>
-                    <li>
-                      <a href="privacy-policy.html" target="_blank">
-                        <i class="ri-arrow-right-s-line"></i>
-                        Privacy Policy
-                      </a>
-                    </li>
-                    <li>
-                      <a href="terms-of-service.html" target="_blank">
-                        <i class="ri-arrow-right-s-line"></i>
-                        Terms &amp; Conditions
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                <div class="footer-widget">
-                  <h3 class="footer-widget-title">Our Offices</h3>
-                  <div class="comp-map">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.795559832775!2d36.684276000000004!3d-1.2973504999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1d3f9295f17f%3A0xc8151d5bd531ec1a!2sSolidroots%20Acquisitions%20Limited!5e0!3m2!1sen!2ske!4v1732094558866!5m2!1sen!2ske"
-                      width="600"
-                      height="450"
-                      style="border: 0"
-                      allowfullscreen=""
-                      loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
                   </div>
+                  <ul class="page-nav list-style mt-10">
+                    <li>
+                      <a href="listings-two.html"><i class="flaticon-back"></i></a>
+                    </li>
+                    <li>
+                      <a class="active" href="listings-two.html">1</a>
+                    </li>
+                    <li><a href="listings-two.html">2</a></li>
+                    <li><a href="listings-two.html">3</a></li>
+                    <li>
+                      <a href="listings-two.html"><i class="flaticon-next-1"></i></a>
+                    </li>
+                  </ul>
                 </div>
-              </div>
+              </section>
             </div>
+            <!-- /.tab-pane -->
           </div>
         </div>
-        <div class="container">
-          <div class="footer-bottom">
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <p class="copyright-text">
-                  <i class="ri-copyright-line"></i><span>WorkingWave</span>. All
-                  Rights Reserved,
-                  <a href="https://hibootsrap.com/" target="_blank">2024</a>
-                </p>
-              </div>
-              <div class="col-md-6">
-                <ul class="social-profile list-style style1">
+        <!-- /.job-tab -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- Listing section start -->
+
+  </div>
+  <!-- Content wrapper end -->
+
+
+  
+
+  <!-- Footer Section Start -->
+  <footer class="footer-wrap style2 pt-100">
+    <img src="assets/img/footer-map.png" alt="Image" class="footer-shape-one" />
+    <div class="footer-top">
+      <div class="container">
+        <div class="row pb-75">
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 pe-xl-5">
+            <div class="footer-widget">
+              <a href="index.html" class="footer-logo">
+                <img src="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png" alt="Image" />
+              </a>
+
+
+            </div>
+            <div class="col-xl-2 col-lg-6 col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h3 class="footer-widget-title">Popular Links</h3>
+                <ul class="footer-menu list-style">
                   <li>
-                    <a
-                      target="_blank"
-                      href="https://www.facebook.com/profile.php?id=61568340275308&mibextid=ZbWKwL"
-                    >
-                      <i class="ri-facebook-fill"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      href="https://x.com/SolidrootsP?t=i8EzncFp_L6AF3SPR-K4Fw&s=09"
-                    >
-                      <i class="ri-twitter-fill"></i>
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a
-                      target="_blank"
-                      href="https://www.linkedin.com/company/solidroots-properties/"
-                    >
-                      <i class="ri-linkedin-fill"></i>
+                    <a href="listings-two.html" target="_blank">
+                      <i class="ri-arrow-right-s-line"></i>
+                      Listings
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </footer>
-      <!-- Footer Section End -->
-    </div>
-    <!-- Page Wrapper End -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 ps-xl-5">
+              <div class="footer-widget">
+                <h3 class="footer-widget-title">Quick Links</h3>
+                <ul class="footer-menu list-style">
+                  <li>
+                    <a href="about.html" target="_blank">
+                      <i class="ri-arrow-right-s-line"></i>
+                      About Us
+                    </a>
+                  </li>
 
-    <!-- Back-to-top button Start -->
-    <a href="javascript:void(0)" class="back-to-top bounce"
-      ><i class="ri-arrow-up-s-line"></i
-    ></a>
-    <!-- Back-to-top button End -->
-
-    <!-- Sign In Modal -->
-    <div class="modal fade" id="signIn" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="ri-close-line"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row align-items-center gx-5">
-              <div class="col-md-6">
-                <div class="login-bg bg-f"></div>
+                  <li>
+                    <a href="contact.html" target="_blank">
+                      <i class="ri-arrow-right-s-line"></i>
+                      Contact Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="privacy-policy.html" target="_blank">
+                      <i class="ri-arrow-right-s-line"></i>
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="terms-of-service.html" target="_blank">
+                      <i class="ri-arrow-right-s-line"></i>
+                      Terms &amp; Conditions
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <div class="col-md-6">
-                <div class="login-content">
-                  <h2>Sign In</h2>
-                  <form class="user-form" action="#">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="text"
-                            name="username"
-                            type="text"
-                            placeholder="Username"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="pwd"
-                            name="pwd"
-                            type="password"
-                            placeholder="Password"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <button class="btn style1">Login Now</button>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <p class="text-center mb-10">Or</p>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-group">
-                          <button type="button" class="btn fb">
-                            SignIn With Facebook
-                            <span><i class="ri-facebook-fill"></i></span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-group">
-                          <button type="button" class="btn linkedin">
-                            SignIn With Linkedin
-                            <span><i class="ri-linkedin-fill"></i></span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-group mb-0">
-                          <button type="button" class="btn twitter">
-                            SignIn With Twitter
-                            <span><i class="ri-twitter-fill"></i></span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h3 class="footer-widget-title">Our Offices</h3>
+                <div class="comp-map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.795559832775!2d36.684276000000004!3d-1.2973504999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1d3f9295f17f%3A0xc8151d5bd531ec1a!2sSolidroots%20Acquisitions%20Limited!5e0!3m2!1sen!2ske!4v1732094558866!5m2!1sen!2ske"
+                    width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="container">
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="copyright-text">
+                <i class="ri-copyright-line"></i><span>WorkingWave</span>. All
+                Rights Reserved,
+                <a href="https://hibootsrap.com/" target="_blank">2024</a>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <ul class="social-profile list-style style1">
+                <li>
+                  <a target="_blank" href="https://www.facebook.com/profile.php?id=61568340275308&mibextid=ZbWKwL">
+                    <i class="ri-facebook-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://x.com/SolidrootsP?t=i8EzncFp_L6AF3SPR-K4Fw&s=09">
+                    <i class="ri-twitter-fill"></i>
+                  </a>
+                </li>
 
-    <!-- Sign Up Modal -->
-    <div class="modal fade" id="signUp" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="ri-close-line"></i>
-            </button>
+                <li>
+                  <a target="_blank" href="https://www.linkedin.com/company/solidroots-properties/">
+                    <i class="ri-linkedin-fill"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="modal-body">
-            <div class="row align-items-center gx-5">
-              <div class="col-md-6">
-                <div class="login-bg bg-f"></div>
-              </div>
-              <div class="col-md-6">
-                <div class="login-content">
-                  <h2>Sign Up</h2>
-                  <p>Please fill the form to create an account</p>
-                  <form class="user-form" action="#">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="fname"
-                            name="fname"
-                            type="text"
-                            placeholder="Full Name"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            placeholder="Email"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="pwd_4"
-                            name="pwd_4"
-                            type="password"
-                            placeholder="Password"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="pwd_3"
-                            name="pwd_3"
-                            placeholder="Confirm Password"
-                            type="password"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-sm-12 col-12">
-                        <div class="checkbox style3">
-                          <input type="checkbox" id="test_1" />
-                          <label for="test_1">
-                            I Agree with the
-                            <a class="link style1" href="terms-of-service.html"
-                              >Terms &amp; conditions</a
-                            >
-                            &amp;
-                            <a class="link style1" href="privacy-policy.html"
-                              >privacy policy</a
-                            >
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <button class="btn style1">Register Now</button>
-                        </div>
+        </div>
+      </div>
+  </footer>
+  <!-- Footer Section End -->
+  </div>
+  <!-- Page Wrapper End -->
+
+  <!-- Back-to-top button Start -->
+  <a href="javascript:void(0)" class="back-to-top bounce"><i class="ri-arrow-up-s-line"></i></a>
+  <!-- Back-to-top button End -->
+
+  <!-- Sign In Modal -->
+  <div class="modal fade" id="signIn" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center gx-5">
+            <div class="col-md-6">
+              <div class="login-bg bg-f"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="login-content">
+                <h2>Sign In</h2>
+                <form class="user-form" action="#">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input id="text" name="username" type="text" placeholder="Username" required />
                       </div>
                     </div>
-                  </form>
-                </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input id="pwd" name="pwd" type="password" placeholder="Password" required />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <button class="btn style1">Login Now</button>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <p class="text-center mb-10">Or</p>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <button type="button" class="btn fb">
+                          SignIn With Facebook
+                          <span><i class="ri-facebook-fill"></i></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <button type="button" class="btn linkedin">
+                          SignIn With Linkedin
+                          <span><i class="ri-linkedin-fill"></i></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group mb-0">
+                        <button type="button" class="btn twitter">
+                          SignIn With Twitter
+                          <span><i class="ri-twitter-fill"></i></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Link of JS files -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/form-validator.min.js"></script>
-    <script src="assets/js/contact-form-script.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery-ui-min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/fslightbox.js"></script>
-    <script src="assets/js/tweenmax.min.js"></script>
-    <script src="assets/js/main.js"></script>
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signUp" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center gx-5">
+            <div class="col-md-6">
+              <div class="login-bg bg-f"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="login-content">
+                <h2>Sign Up</h2>
+                <p>Please fill the form to create an account</p>
+                <form class="user-form" action="#">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input id="fname" name="fname" type="text" placeholder="Full Name" required />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input id="email" name="email" type="email" placeholder="Email" required />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input id="pwd_4" name="pwd_4" type="password" placeholder="Password" required />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input id="pwd_3" name="pwd_3" placeholder="Confirm Password" type="password" required />
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-12">
+                      <div class="checkbox style3">
+                        <input type="checkbox" id="test_1" />
+                        <label for="test_1">
+                          I Agree with the
+                          <a class="link style1" href="terms-of-service.html">Terms &amp; conditions</a>
+                          &amp;
+                          <a class="link style1" href="privacy-policy.html">privacy policy</a>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <button class="btn style1">Register Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript"></script>
-  </body>
+  <!-- Link of JS files -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/form-validator.min.js"></script>
+  <script src="assets/js/contact-form-script.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/jquery-ui-min.js"></script>
+  <script src="assets/js/jquery.appear.js"></script>
+  <script src="assets/js/odometer.min.js"></script>
+  <script src="assets/js/fslightbox.js"></script>
+  <script src="assets/js/tweenmax.min.js"></script>
+  <script src="assets/js/main.js"></script>
 
-  <!-- Mirrored from templates.WorkingWave.com/fela/default/listings-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 08:26:15 GMT -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript"></script>
+</body>
+
+<!-- Mirrored from templates.WorkingWave.com/fela/default/listings-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 08:26:15 GMT -->
+
 </html>
