@@ -352,8 +352,13 @@
     </div>
 
     <script>
-      const apiUrl = "http://localhost:3000/api/residentialproperties"; // Replace with your API endpoint
-
+      // const apiUrl = "http://localhost:3000/api/residentialproperties" // Replace with your API endpoint
+      const apiUrl = {
+          residential: "http://localhost:3000/api/residentialproperties",
+          commercial: "http://localhost:3000/api/commercialproperties",
+          land: "http://localhost:3000/api/lands",
+        };
+ 
       const fetchPropertyDetails = async () => {
         const params = new URLSearchParams(window.location.search);
         const propertyId = params.get("id");
