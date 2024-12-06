@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-<!-- Mirrored from templates.WorkingWave.com/fela/default/listings-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 08:26:13 GMT -->
 
 <head>
   <!-- Required meta tags -->
@@ -32,7 +31,7 @@
     href="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png" />
  
 </head>
-<style> 
+<style>  
   .btn-custom {
     
     border: 2px solid #b78509;
@@ -191,6 +190,7 @@
         <p>Click below to view our collection</p>
       </div>
     </div>
+
     <section class="property-listing pt-100 pb-75">
       <div class="container">
         <div class="mb-4 d-flex align-items-center">
@@ -209,43 +209,27 @@
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="land-tab" data-bs-toggle="tab" data-bs-target="#land" type="button" role="tab" aria-controls="land" aria-selected="false">Land</button>
           </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="retail-tab" data-bs-toggle="tab" data-bs-target="#retail" type="button" role="tab" aria-controls="retail" aria-selected="false">Retail Properties</button>
+          </li>
         </ul>
         <div class="tab-content" id="propertyTabsContent">
-          <div class="tab-pane fade show active" id="residential" role="tabpanel" aria-labelledby="residential-tab">
-            <div class="row" id="residentialCards">
-              <!-- Residential property cards will be dynamically inserted here -->
+          <!-- Existing Tabs -->
+          <!-- Residential, Commercial, and Land Content -->
+          <div class="tab-pane fade" id="retail" role="tabpanel" aria-labelledby="retail-tab">
+            <div class="row" id="retailCards">
+              <!-- Retail property cards will be dynamically inserted here -->
             </div>
             <nav>
-              <ul class="pagination justify-content-center mt-4" id="residentialPagination">
-                <!-- Residential pagination will be dynamically inserted here -->
-              </ul>
-            </nav>
-          </div>
-          <div class="tab-pane fade" id="commercial" role="tabpanel" aria-labelledby="commercial-tab">
-            <div class="row" id="commercialCards">
-              <!-- Commercial property cards will be dynamically inserted here -->
-            </div>
-            <nav>
-              <ul class="pagination justify-content-center mt-4" id="commercialPagination">
-                <!-- Commercial pagination will be dynamically inserted here -->
-              </ul>
-            </nav>
-          </div>
-          <div class="tab-pane fade" id="land" role="tabpanel" aria-labelledby="land-tab">
-            <div class="row" id="landCards">
-              <!-- Land property cards will be dynamically inserted here -->
-            </div>
-            <nav>
-              <ul class="pagination justify-content-center mt-4" id="landPagination">
-                <!-- Land pagination will be dynamically inserted here -->
+              <ul class="pagination justify-content-center mt-4" id="retailPagination">
+                <!-- Retail pagination will be dynamically inserted here -->
               </ul>
             </nav>
           </div>
         </div>
       </div>
     </section>
-  
- 
+    
   
 
 
@@ -374,236 +358,10 @@
   <a href="javascript:void(0)" class="back-to-top bounce"><i class="ri-arrow-up-s-line"></i></a>
   <!-- Back-to-top button End -->
 
-  <!-- Sign In Modal -->
-  <div class="modal fade" id="signIn" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-            <i class="ri-close-line"></i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row align-items-center gx-5">
-            <div class="col-md-6">
-              <div class="login-bg bg-f"></div>
-            </div>
-            <div class="col-md-6">
-              <div class="login-content">
-                <h2>Sign In</h2>
-                <form class="user-form" action="#">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <input id="text" name="username" type="text" placeholder="Username" required />
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <input id="pwd" name="pwd" type="password" placeholder="Password" required />
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <button class="btn style1">Login Now</button>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <p class="text-center mb-10">Or</p>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <button type="button" class="btn fb">
-                          SignIn With Facebook
-                          <span><i class="ri-facebook-fill"></i></span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <button type="button" class="btn linkedin">
-                          SignIn With Linkedin
-                          <span><i class="ri-linkedin-fill"></i></span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group mb-0">
-                        <button type="button" class="btn twitter">
-                          SignIn With Twitter
-                          <span><i class="ri-twitter-fill"></i></span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sign Up Modal -->
-  <div class="modal fade" id="signUp" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-            <i class="ri-close-line"></i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row align-items-center gx-5">
-            <div class="col-md-6">
-              <div class="login-bg bg-f"></div>
-            </div>
-            <div class="col-md-6">
-              <div class="login-content">
-                <h2>Sign Up</h2>
-                <p>Please fill the form to create an account</p>
-                <form class="user-form" action="#">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <input id="fname" name="fname" type="text" placeholder="Full Name" required />
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <input id="email" name="email" type="email" placeholder="Email" required />
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <input id="pwd_4" name="pwd_4" type="password" placeholder="Password" required />
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <input id="pwd_3" name="pwd_3" placeholder="Confirm Password" type="password" required />
-                      </div>
-                    </div>
-                    <div class="col-sm-12 col-12">
-                      <div class="checkbox style3">
-                        <input type="checkbox" id="test_1" />
-                        <label for="test_1">
-                          I Agree with the
-                          <a class="link style1" href="terms-of-service.html">Terms &amp; conditions</a>
-                          &amp;
-                          <a class="link style1" href="privacy-policy.html">privacy policy</a>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <button class="btn style1">Register Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
 
 
-
-  <script>
-    const endpoints = {
-      residential: "http://localhost:3000/api/residentialproperties",
-      commercial: "http://localhost:3000/api/commercialproperties",
-      land: "http://localhost:3000/api/lands"
-    };
-
-    const ITEMS_PER_PAGE = 8;
-
-    const fetchProperties = async (type, page = 1, searchQuery = "") => {
-      try {
-        const response = await axios.get(endpoints[type]);
-        const properties = response.data;
-
- // Filter properties based on the search query
- if (searchQuery) {
-          const query = searchQuery.toLowerCase();
-          properties = properties.filter(property =>
-            property.location.toLowerCase().includes(query) ||
-            property.category.toLowerCase().includes(query) ||
-            property.price.toLowerCase().includes(query)
-          );
-        }
-
-
-        // Pagination logic
-        const totalItems = properties.length;
-        const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
-        const startIndex = (page - 1) * ITEMS_PER_PAGE;
-        const endIndex = startIndex + ITEMS_PER_PAGE;
-        const paginatedProperties = properties.slice(startIndex, endIndex);
-
-        // Insert cards into the DOM
-        const propertyCards = document.getElementById(`${type}Cards`);
-        propertyCards.innerHTML = paginatedProperties.map(property => `
-          <div class="col-xl-4 col-lg-6 col-md-6">
-            <div class="property-card style2">
-              <div class="property-img-slider owl-carousel">
-                ${property.images.map(img => `<img src="${img}" alt="Property Image" />`).join('')}
-              </div>
-              <div class="property-info">
-                <div class="property-status-wrap">
-                  <h3><a href="listing-details.html">${property.location}</a></h3>
-                  <span class="property-status">${property.category}</span>
-                  <p class="property-price">${property.price}</p>
-                  <span class="property-status">${property.status}</span>
-                </div>
-                <p><i class="flaticon-location"></i>${property.location}</p>
-                <ul class="property-metainfo list-style">
-                  <li><i class="flaticon-double-bed"></i>5</li>
-                  <li><i class="flaticon-bath-tub"></i>0</li>
-                  <li><i class="flaticon-square"></i>3100 sqft</li>
-                </ul>
-                <a href="property-details.html?id=${property._id}" class="btn style1 mt-20">See Details</a>
-
-              
-              </div>
-            </div>
-          </div>
-        `).join('');
-
-        // Initialize carousels
-        // $(`#${type}Cards .property-img-slider`).owlCarousel({
-        //   loop: true,
-        //   margin: 10,
-        //   nav: true,
-        //   items: 1
-        // });
-
-        // Generate pagination
-        const pagination = document.getElementById(`${type}Pagination`);
-        pagination.innerHTML = '';
-
-        for (let i = 1; i <= totalPages; i++) {
-          pagination.innerHTML += `
-            <li class="page-item ${i === page ? 'active' : ''}">
-              <a class="page-link" href="#" onclick="fetchProperties('${type}', ${i})">${i}</a>
-            </li>
-          `;
-        }
-      } catch (error) {
-        console.error(`Error fetching ${type} properties:`, error);
-      }
-    };
-
-    // Initial fetch for all tabs
-    fetchProperties('residential');
-    fetchProperties('commercial');
-    fetchProperties('land');
-  </script>
   <!-- Link of JS files -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -623,6 +381,6 @@
   <script type="text/javascript"></script>
 </body>
 
-<!-- Mirrored from templates.WorkingWave.com/fela/default/listings-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 08:26:15 GMT -->
+<!-- WorkingWavelistings-two.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 08:26:15 GMT -->
 
 </html>
