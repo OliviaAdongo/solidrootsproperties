@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="assets/css/dark-theme.css" />
 
     <title>SolidRoots Properties</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link
       rel="icon"
       type="image/png"
@@ -52,11 +55,7 @@
                 src="assets/img/solidroots_properties_logo_c3-2-removebg-preview.png"
                 alt="logo"
               />
-              <img
-                class="logo-dark"
-                src="assets/img/logo-white.png"
-                alt="logo"
-              />
+              
             </a>
             <div
               class="collapse navbar-collapse main-menu-wrap"
@@ -275,614 +274,81 @@
       <!-- Property search form end-->
 
       <!-- Property section start -->
-       <section class="property-wrap pt-100 pb-75">
+  
+      <section class="city-wrap ptb-100">
         <div class="container">
-          <div class="row section-title style1 mb-40 align-items-end">
-            <div class="col-md-8">
-              <span>Our Properties</span>
-              <h2>Latest Property Listings</h2>
-            </div>
-            <div class="col-md-4 text-md-end sm-none">
-              <a href="listings-two.html" class="btn style1"
-                >View All Listings</a
-              >
+          <div class="row">
+            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+              <div class="section-title style1 text-center mb-40">
+                <h2>Our Properties</h2>
+                <p>Click below to view our collection</p>
+              </div>
             </div>
           </div>
-          <ul class="nav nav-tabs property-tablist" role="tablist">
-            <li class="nav-item">
-              <button
-                class="nav-link active"
-                data-bs-toggle="tab"
-                data-bs-target="#tab_1"
-                type="button" 
-                role="tab"
-              >
-                Residential
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#tab_2"  
-                type="button"
-                role="tab"
-              >
-                Commercial
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#tab_3"
-                type="button"
-                role="tab"
-              >
-                Land
-              </button>
-            </li>
-          </ul>
-          <div class="tab-content hw-tab-content">
-            <div class="tab-pane fade show active" id="tab_1" role="tabpanel">
-              <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-10.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-1.jpg" alt="Image">
-                                    <img src="assets/img/property/property-11.jpg" alt="Image">
-                      <img src="assets/img/property/property-1.jpg" alt="Image">
-                                    <img src="assets/img/property/property-11.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$34,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Villa In Luis Park</a>
-                      </h3>
-                      <p><i class="flaticon-location"></i>Kilimani</p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>06</li>
-                        <li><i class="flaticon-bath-tub"></i>04</li>
-                        <li><i class="flaticon-square"></i>3100 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-2.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-7.jpg" alt="Image">
-                                    <img src="assets/img/property/property-8.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Sale</span>
-                        <p class="property-price">$21,400</p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Modern Apartment</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>123/A, Miles Ave, North
-                        Steet, USA
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>05</li>
-                        <li><i class="flaticon-bath-tub"></i>03</li>
-                        <li><i class="flaticon-square"></i>2500 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-3.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-9.jpg" alt="Image">
-                                    <img src="assets/img/property/property-17.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$44,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Apartment For Rent</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>732 Burwell Heights
-                        Road, Houston
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>07</li>
-                        <li><i class="flaticon-bath-tub"></i>04</li>
-                        <li><i class="flaticon-square"></i>4110 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-4.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-13.jpg" alt="Image">
-                                    <img src="assets/img/property/property-12.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$25,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Dreamy Penthouse</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>4890 Grey Fox Fam Road,
-                        Houston
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>05</li>
-                        <li><i class="flaticon-bath-tub"></i>02</li>
-                        <li><i class="flaticon-square"></i>2210 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-5.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-17.jpg" alt="Image">
-                                    <img src="assets/img/property/property-18.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$34,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Luxury Apartment</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>2665 Blair Court,
-                        Dalton, Missouri
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>04</li>
-                        <li><i class="flaticon-bath-tub"></i>02</li>
-                        <li><i class="flaticon-square"></i>2800 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-6.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-19.jpg" alt="Image">
-                                    <img src="assets/img/property/property-23.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Sale</span>
-                        <p class="property-price">$44,000</p>
-                      </div>
-                      <h3><a href="listing-details.html">Flat For Sale</a></h3>
-                      <p>
-                        <i class="flaticon-location"></i>1849 Woodbridge Lane,
-                        Michigan
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>06</li>
-                        <li><i class="flaticon-bath-tub"></i>05</li>
-                        <li><i class="flaticon-square"></i>4000 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="city-slider-one owl-carousel">
+            <div
+              class="city-card style2"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+            >
+              <img src="assets/img/city/city-20.jpg" alt="Image" />
+              <p>
+                <a href="listings-two.html#popular-jobs" class="btn style2"
+                  >View More</a
+                >
+              </p>
+              <h3><a href="listings-two.html">Residential Properties</a></h3>
             </div>
-            <div class="tab-pane fade" id="tab_2" role="tabpanel">
-              <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-1.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-10.jpg" alt="Image">
-                                    <img src="assets/img/property/property-11.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$34,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Villa In Luis Park</a>
-                      </h3>
-                      <p><i class="flaticon-location"></i>Kilimani</p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>06</li>
-                        <li><i class="flaticon-bath-tub"></i>04</li>
-                        <li><i class="flaticon-square"></i>3100 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-7.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-2.jpg" alt="Image">
-                                    <img src="assets/img/property/property-8.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Sale</span>
-                        <p class="property-price">$21,400</p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Modern Apartment</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>123/A, Miles Ave, North
-                        Steet, USA
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>05</li>
-                        <li><i class="flaticon-bath-tub"></i>03</li>
-                        <li><i class="flaticon-square"></i>2500 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-9.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-3.jpg" alt="Image">
-                                    <img src="assets/img/property/property-17.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$44,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Apartment For Rent</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>732 Burwell Heights
-                        Road, Houston
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>07</li>
-                        <li><i class="flaticon-bath-tub"></i>04</li>
-                        <li><i class="flaticon-square"></i>4110 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-13.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-4.jpg" alt="Image">
-                                    <img src="assets/img/property/property-12.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$25,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Dreamy Penthouse</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>4890 Grey Fox Fam Road,
-                        Houston
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>05</li>
-                        <li><i class="flaticon-bath-tub"></i>02</li>
-                        <li><i class="flaticon-square"></i>2210 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-17.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-5.jpg" alt="Image">
-                                    <img src="assets/img/property/property-18.jpg" alt="Image">
-                      <img src="assets/img/property/property-5.jpg" alt="Image">
-                                    <img src="assets/img/property/property-18.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$34,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Luxury Apartment</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>2665 Blair Court,
-                        Dalton, Missouri
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>04</li>
-                        <li><i class="flaticon-bath-tub"></i>02</li>
-                        <li><i class="flaticon-square"></i>2800 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-19.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-6.jpg" alt="Image">
-                                    <img src="assets/img/property/property-23.jpg" alt="Image">
-                      <img src="assets/img/property/property-6.jpg" alt="Image">
-                                    <img src="assets/img/property/property-23.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Sale</span>
-                        <p class="property-price">$44,000</p>
-                      </div>
-                      <h3><a href="listing-details.html">Flat For Sale</a></h3>
-                      <p>
-                        <i class="flaticon-location"></i>1849 Woodbridge Lane,
-                        Michigan
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>06</li>
-                        <li><i class="flaticon-bath-tub"></i>05</li>
-                        <li><i class="flaticon-square"></i>4000 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div
+              class="city-card style2"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="300"
+            >
+              <img src="assets/img/city/city-21.jpg" alt="Image" />
+              <p>
+                <a href="listings-two.html#hot-jobs" class="btn style2"
+                  >View More</a
+                >
+              </p>
+              <h3><a href="listings-two.html">Commercial Properties</a></h3>
             </div>
-            <div class="tab-pane fade" id="tab_3" role="tabpanel">
-              <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-10.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-1.jpg" alt="Image">
-                                    <img src="assets/img/property/property-11.jpg" alt="Image">
-                      <img src="assets/img/property/property-1.jpg" alt="Image">
-                                    <img src="assets/img/property/property-11.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$34,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Villa In Luis Park</a>
-                      </h3>
-                      <p><i class="flaticon-location"></i>Kilimani</p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>06</li>
-                        <li><i class="flaticon-bath-tub"></i>04</li>
-                        <li><i class="flaticon-square"></i>3100 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-8.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-7.jpg" alt="Image">
-                                    <img src="assets/img/property/property-2.jpg" alt="Image">
-                      <img src="assets/img/property/property-7.jpg" alt="Image">
-                                    <img src="assets/img/property/property-2.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Sale</span>
-                        <p class="property-price">$21,400</p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Modern Apartment</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>123/A, Miles Ave, North
-                        Steet, USA
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>05</li>
-                        <li><i class="flaticon-bath-tub"></i>03</li>
-                        <li><i class="flaticon-square"></i>2500 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-17.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-9.jpg" alt="Image">
-                                    <img src="assets/img/property/property-3.jpg" alt="Image">
-                      <img src="assets/img/property/property-9.jpg" alt="Image">
-                                    <img src="assets/img/property/property-3.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$44,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Apartment For Rent</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>732 Burwell Heights
-                        Road, Houston
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>07</li>
-                        <li><i class="flaticon-bath-tub"></i>04</li>
-                        <li><i class="flaticon-square"></i>4110 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-12.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-13.jpg" alt="Image">
-                                    <img src="assets/img/property/property-4.jpg" alt="Image">
-                      <img src="assets/img/property/property-13.jpg" alt="Image">
-                                    <img src="assets/img/property/property-4.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$25,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Dreamy Penthouse</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>4890 Grey Fox Fam Road,
-                        Houston
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>05</li>
-                        <li><i class="flaticon-bath-tub"></i>02</li>
-                        <li><i class="flaticon-square"></i>2210 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-18.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-17.jpg" alt="Image">
-                                    <img src="assets/img/property/property-5.jpg" alt="Image">
-                      <img src="assets/img/property/property-17.jpg" alt="Image">
-                                    <img src="assets/img/property/property-5.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Rent</span>
-                        <p class="property-price">$34,900/<span>month</span></p>
-                      </div>
-                      <h3>
-                        <a href="listing-details.html">Luxury Apartment</a>
-                      </h3>
-                      <p>
-                        <i class="flaticon-location"></i>2665 Blair Court,
-                        Dalton, Missouri
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>04</li>
-                        <li><i class="flaticon-bath-tub"></i>02</li>
-                        <li><i class="flaticon-square"></i>2800 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                  <div class="property-card style2">
-                    <div class="property-img-slider owl-carousel">
-                      <img
-                        src="assets/img/property/property-23.jpg"
-                        alt="Image"
-                      />
-                      <img src="assets/img/property/property-19.jpg" alt="Image">
-                                    <img src="assets/img/property/property-6.jpg" alt="Image">
-                      <img src="assets/img/property/property-19.jpg" alt="Image">
-                                    <img src="assets/img/property/property-6.jpg" alt="Image">
-                    </div>
-                    <div class="property-info">
-                      <div class="property-status-wrap">
-                        <span class="property-status">For Sale</span>
-                        <p class="property-price">$44,000</p>
-                      </div>
-                      <h3><a href="listing-details.html">Flat For Sale</a></h3>
-                      <p>
-                        <i class="flaticon-location"></i>1849 Woodbridge Lane,
-                        Michigan
-                      </p>
-                      <ul class="property-metainfo list-style">
-                        <li><i class="flaticon-double-bed"></i>06</li>
-                        <li><i class="flaticon-bath-tub"></i>05</li>
-                        <li><i class="flaticon-square"></i>4000 sqft</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div
+              class="city-card style2"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="400"
+            >
+              <img src="assets/img/city/city-22.jpg" alt="Image" />
+
+              <p>
+                <a href="listings-two.html#hot-jobs" class="btn style2"
+                  >View More</a
+                >
+              </p>
+              <h3><a href="listings-two.html">Land Properties</a></h3>
+            </div>
+            <div
+              class="city-card style2"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="400"
+            >
+              <img src="assets/img/city/city-22.jpg" alt="Image" />
+
+              <p>
+                <a href="listings-two.html#hot-jobs" class="btn style2"
+                  >View More</a
+                >
+              </p>
+              <h3><a href="listings-two.html">Retail Properties</a></h3>
             </div>
           </div>
         </div>
       </section>
-      
+
+     
 
       <!-- How It works section start-->
       <section class="hw-wrap bg-seashell pt-100 pb-75">
@@ -1142,7 +608,7 @@
         </div>
       </section>
       <!-- City section start -->
-      <section class="city-wrap ptb-100">
+      <!-- <section class="city-wrap ptb-100">
         <div class="container">
           <div class="row">
             <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
@@ -1198,7 +664,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- City section end -->
 
@@ -1214,194 +680,65 @@
               <div class="section-title style1 text-center mb-40">
                 <h2>Easy Price For Home Owners</h2>
                 <p>
-                  Here is a sample list for our properties that are up for rent.
+                  Here is a sample list of our properties that are up for rent.
                 </p>
               </div>
             </div>
           </div>
-          <div class="row justify-content-center">
-            <div
-              class="col-xl-4 col-lg-6 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="200"
-            >
-              <div class="property-card style3">
-                <div class="property-img">
-                  <img src="assets/img/property/property-26.jpg" alt="Image" />
-                  <span class="property-status">For Rent</span>
-                  <span class="property-condo">New</span>
-                </div>
-                <div class="property-info">
-                  <div class="property-status-wrap">
-                    <span class="property-state"
-                      ><i class="flaticon-home"></i>House</span
-                    >
-                    <p class="property-price">KSH 124,900/<span>month</span></p>
-                  </div>
-                  <h3>
-                    <a href="listing-details.html">Morningside Apartment</a>
-                  </h3>
-                  <p><i class="flaticon-location"></i>Nairobi</p>
-                  <ul class="property-metainfo list-style">
-                    <li><i class="flaticon-double-bed"></i>04</li>
-                    <li><i class="flaticon-bath-tub"></i>04</li>
-                    <li><i class="flaticon-square"></i>1400 sqft</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-4 col-lg-6 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="300"
-            >
-              <div class="property-card style3">
-                <div class="property-img">
-                  <img src="assets/img/property/property-27.jpg" alt="Image" />
-                  <span class="property-status">For Rent</span>
-                </div>
-                <div class="property-info">
-                  <div class="property-status-wrap">
-                    <span class="property-state"
-                      ><i class="flaticon-home"></i>Unit</span
-                    >
-                    <p class="property-price">KSH 129,000/<span>month</span></p>
-                  </div>
-                  <h3><a href="listing-details.html">Duplex Villa</a></h3>
-                  <p><i class="flaticon-location"></i>Lavington</p>
-                  <ul class="property-metainfo list-style">
-                    <li><i class="flaticon-double-bed"></i>05</li>
-                    <li><i class="flaticon-bath-tub"></i>04</li>
-                    <li><i class="flaticon-square"></i>1200 sqft</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-4 col-lg-6 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="400"
-            >
-              <div class="property-card style3">
-                <div class="property-img">
-                  <img src="assets/img/property/property-28.jpg" alt="Image" />
-                  <span class="property-status">For Rent</span>
-                  <span class="property-condo">New</span>
-                </div>
-                <div class="property-info">
-                  <div class="property-status-wrap">
-                    <span class="property-state"
-                      ><i class="flaticon-home"></i>Apartment</span
-                    >
-                    <p class="property-price">KSH 134,900/<span>month</span></p>
-                  </div>
-                  <h3>
-                    <a href="listing-details.html">Sky villa Apartment</a>
-                  </h3>
-                  <p><i class="flaticon-location"></i>Ruiru</p>
-                  <ul class="property-metainfo list-style">
-                    <li><i class="flaticon-double-bed"></i>06</li>
-                    <li><i class="flaticon-bath-tub"></i>04</li>
-                    <li><i class="flaticon-square"></i>310 sqft</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-4 col-lg-6 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="200"
-            >
-              <div class="property-card style3">
-                <div class="property-img">
-                  <img src="assets/img/property/property-25.jpg" alt="Image" />
-                  <span class="property-status">For Rent</span>
-                  <span class="property-condo">Popular</span>
-                </div>
-                <div class="property-info">
-                  <div class="property-status-wrap">
-                    <span class="property-state"
-                      ><i class="flaticon-home"></i>House</span
-                    >
-                    <p class="property-price">KSH 114,900/<span>month</span></p>
-                  </div>
-                  <h3><a href="listing-details.html">Luxury Villa</a></h3>
-                  <p><i class="flaticon-location"></i>Kikuyu</p>
-                  <ul class="property-metainfo list-style">
-                    <li><i class="flaticon-double-bed"></i>06</li>
-                    <li><i class="flaticon-bath-tub"></i>04</li>
-                    <li><i class="flaticon-square"></i>3100 sqft</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-4 col-lg-6 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="300"
-            >
-              <div class="property-card style3">
-                <div class="property-img">
-                  <img src="assets/img/property/property-1.jpg" alt="Image" />
-                  <span class="property-status">For Rent</span>
-                  <span class="property-condo">New</span>
-                </div>
-                <div class="property-info">
-                  <div class="property-status-wrap">
-                    <span class="property-state"
-                      ><i class="flaticon-home"></i>Apartment</span
-                    >
-                    <p class="property-price">KSH 134,900/<span>month</span></p>
-                  </div>
-                  <h3>
-                    <a href="listing-details.html">Lake View Apartment</a>
-                  </h3>
-                  <p><i class="flaticon-location"></i>Kitengela</p>
-                  <ul class="property-metainfo list-style">
-                    <li><i class="flaticon-double-bed"></i>07</li>
-                    <li><i class="flaticon-bath-tub"></i>04</li>
-                    <li><i class="flaticon-square"></i>1200 sqft</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-4 col-lg-6 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="400"
-            >
-              <div class="property-card style3">
-                <div class="property-img">
-                  <img src="assets/img/property/property-2.jpg" alt="Image" />
-                  <span class="property-status">For Rent</span>
-                  <span class="property-condo">New</span>
-                </div>
-                <div class="property-info">
-                  <div class="property-status-wrap">
-                    <span class="property-state"
-                      ><i class="flaticon-home"></i>Apartment</span
-                    >
-                    <p class="property-price">KSH 124,000/<span>month</span></p>
-                  </div>
-                  <h3><a href="listing-details.html">Apartment For Rent</a></h3>
-                  <p><i class="flaticon-location"></i>Ngara</p>
-                  <ul class="property-metainfo list-style">
-                    <li><i class="flaticon-double-bed"></i>06</li>
-                    <li><i class="flaticon-bath-tub"></i>04</li>
-                    <li><i class="flaticon-square"></i>2210 sqft</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div class="row justify-content-center" id="residential-property-list">
+            <!-- Residential properties will be injected here -->
           </div>
         </div>
       </section>
+      
+      <script>
+        const fetchResidentialProperties = async () => {
+          try {
+            const response = await axios.get('http://localhost:3000/api/residentialproperties');
+            let properties = response.data;
+      
+            // Sort properties by creation date (descending) and get the latest 6
+            properties = properties
+              .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+              .slice(0, 6);
+      
+            const container = document.getElementById('residential-property-list');
+            container.innerHTML = properties.map(property => `
+              <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                <div class="property-card style3">
+                  <div class="property-img">
+                    <img src="http://localhost:3000/uploads/${property.images[0]}" alt="Property Image" class="img-fluid" crossorigin="anonymous" />
+                    <span class="property-status">${property.status}</span>
+                    <span class="property-status">${property.availability}</span>
+                  </div>
+                  <div class="property-info">
+                    <div class="property-status-wrap">
+                      <span class="property-state"><i class="flaticon-home"></i>House</span>
+                      <p class="property-price">${property.price}</p>
+                    </div>
+                    <h3>
+                      <a href="listing-details.html?id=${property._id}">${property.location}</a>
+                    </h3>
+                    <p><i class="flaticon-location"></i>${property.location}</p>
+                    <ul class="property-metainfo list-style">
+                      <li><i class="flaticon-double-bed"></i>${property.beds || 'N/A'}</li>
+                      <li><i class="flaticon-bath-tub"></i>${property.baths || '0'}</li>
+                      <li><i class="flaticon-square"></i>${property.size || 'N/A'} sqft</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            `).join('');
+          } catch (error) {
+            console.error('Error fetching residential properties:', error);
+          }
+        };
+      
+        // Fetch residential properties on page load
+        window.onload = fetchResidentialProperties;
+      </script>
+      
+      
       <!-- Property Slider end -->
 
       <!-- FAQ section start -->
@@ -1870,191 +1207,10 @@
     <!-- Back-to-top button End -->
 
     <!-- Sign In Modal -->
-    <div class="modal fade" id="signIn" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="ri-close-line"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row align-items-center gx-5">
-              <div class="col-md-6">
-                <div class="login-bg bg-f"></div>
-              </div>
-              <div class="col-md-6">
-                <div class="login-content">
-                  <h2>Sign In</h2>
-                  <form class="user-form" action="#">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="text"
-                            name="username"
-                            type="text"
-                            placeholder="Username"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="pwd"
-                            name="pwd"
-                            type="password"
-                            placeholder="Password"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <button class="btn style1">Login Now</button>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <p class="text-center mb-10">Or</p>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-group">
-                          <button type="button" class="btn fb">
-                            SignIn With Facebook
-                            <span><i class="ri-facebook-fill"></i></span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-group">
-                          <button type="button" class="btn linkedin">
-                            SignIn With Linkedin
-                            <span><i class="ri-linkedin-fill"></i></span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-group mb-0">
-                          <button type="button" class="btn twitter">
-                            SignIn With Twitter
-                            <span><i class="ri-twitter-fill"></i></span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  
 
     <!-- Sign Up Modal -->
-    <div class="modal fade" id="signUp" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="ri-close-line"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row align-items-center gx-5">
-              <div class="col-md-6">
-                <div class="login-bg bg-f"></div>
-              </div>
-              <div class="col-md-6">
-                <div class="login-content">
-                  <h2>Sign Up</h2>
-                  <p>Please fill the form to create an account</p>
-                  <form class="user-form" action="#">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="fname"
-                            name="fname"
-                            type="text"
-                            placeholder="Full Name"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            placeholder="Email"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="pwd_2"
-                            name="pwd_2"
-                            type="password"
-                            placeholder="Password"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input
-                            id="pwd_3"
-                            name="pwd_3"
-                            placeholder="Confirm Password"
-                            type="password"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-sm-12 col-12">
-                        <div class="checkbox style3">
-                          <input type="checkbox" id="test_1" />
-                          <label for="test_1">
-                            I Agree with the
-                            <a class="link style1" href="terms-of-service.html"
-                              >Terms &amp; conditions</a
-                            >
-                            &amp;
-                            <a class="link style1" href="privacy-policy.html"
-                              >privacy policy</a
-                            >
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <button class="btn style1">Register Now</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  
 
     <!-- Link of JS files -->
     <script src="assets/js/jquery.min.js"></script>
@@ -2069,6 +1225,9 @@
     <script src="assets/js/fslightbox.js"></script>
     <script src="assets/js/tweenmax.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript"></script>
   </body>
 
 </html>

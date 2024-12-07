@@ -1,46 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Property Details</title>
-  <!-- Add Bootstrap CSS (or other CSS framework) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Link of CSS files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/flaticon.css" />
+  <link rel="stylesheet" href="assets/css/remixicon.css" />
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui-min.css" />
+  <link rel="stylesheet" href="assets/css/odometer.min.css" />
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/dark-theme.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <title>SolidRoots Properties</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+ 
+   
+
+  <link rel="icon" type="image/png"
+    href="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png" />
+ 
 </head>
 <body>
-  <div class="container mt-5">
-    <h1>Property Details</h1>
+  
+<div class="page-wrapper">
+  <header class="header-wrap">
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="index.html">
+          <img
+            class="logo-light"
+            src="assets/img/solidroots_properties_logo_c3-2-removebg-preview.png"
+            alt="logo"
+          />
+          
+        </a>
+        <div
+          class="collapse navbar-collapse main-menu-wrap"
+          id="navbarSupportedContent"
+        >
+          <div class="menu-close d-lg-none">
+            <a href="javascript:void(0)"> <i class="ri-close-line"></i></a>
+          </div>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="about.html" class="nav-link"> About Us </a>
+            </li>
+            <li class="nav-item">
+              <a href="listings-two.html" class="nav-link"
+                >Property Listings
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services </a>
+            </li>
 
-    <div class="row">
-      <div class="col-md-8">
-        <!-- Property Location -->
-        <h3>Location: <span id="property-location"></span></h3>
-
-        <!-- Property Images -->
-        <div id="property-images" class="mb-4">
-          <!-- Images will be loaded here -->
+            <li class="nav-item">
+              <a href="blog.html" class="nav-link"> Insights </a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <div>
+                <ul class="social-profile list-style style1">
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/profile.php?id=61568340275308&mibextid=ZbWKwL"
+                    >
+                      <i class="ri-facebook-fill"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://x.com/SolidrootsP?t=i8EzncFp_L6AF3SPR-K4Fw&s=09"
+                    >
+                      <i class="ri-twitter-fill"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://instagram.com/">
+                      <i class="ri-instagram-line"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/company/solidroots-properties/"
+                    >
+                      <i class="ri-linkedin-fill"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="others-options md-none">
+            <div class="header-btn">
+              <div>
+                <ul class="social-profile list-style style1">
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/profile.php?id=61568340275308&mibextid=ZbWKwL"
+                    >
+                      <i class="ri-facebook-fill"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://x.com/SolidrootsP?t=i8EzncFp_L6AF3SPR-K4Fw&s=09"
+                    >
+                      <i class="ri-twitter-fill"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://instagram.com/">
+                      <i class="ri-instagram-line"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/company/solidroots-properties/"
+                    >
+                      <i class="ri-linkedin-fill"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Property Description -->
-        <p><strong>Description:</strong> <span id="property-description"></span></p>
-
-        <!-- Property Category -->
-        <p><strong>Category:</strong> <span id="property-category"></span></p>
-
-        <!-- Property Price -->
-        <p><strong>Price:</strong> <span id="property-price"></span></p>
-
-        <!-- Property Status -->
-        <p><strong>Status:</strong> <span id="property-status"></span></p>
-
-        <!-- Property Agent -->
-        <p><strong>Agent:</strong> <span id="property-agent"></span></p>
-
-        <!-- Property Amenities -->
-        <p><strong>Amenities:</strong> <span id="property-amenities"></span></p>
+      </nav>
+      <div class="mobile-bar-wrap">
+        <div class="mobile-menu d-lg-none">
+          <a href="javascript:void(0)"><i class="ri-menu-line"></i></a>
+        </div>
       </div>
     </div>
+  </header>
+  <div class="content-wrapper">
+    <!-- Breadcrumb Start -->
+    <div class="breadcrumb-wrap bg-f br-2">
+      <div class="container">
+        <div class="breadcrumb-title">
+          <h2>Listing</h2>
+          <ul class="breadcrumb-menu list-style">
+            <li><a href="listings-two.html"> Property Listings </a></li>
+            <li>Listing Details</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+   
+
+    <!-- /.container -->
   </div>
+  <section class="property-wrap pt-100 pb-75">
+    <div class="container mt-5">
+      <h1>Property Details</h1>
+  
+      <div class="row">
+        <div class="col-md-8">
+          <!-- Property Location -->
+          <h3>Location: <span id="property-location"></span></h3>
+  
+          <!-- Property Images -->
+          <div id="property-images" class="mb-4">
+            <!-- Images will be loaded here -->
+          </div>
+  
+          <!-- Property Description -->
+          <p><strong>Description:</strong> <span id="property-description"></span></p>
+  
+          <!-- Property Category -->
+          <p><strong>Category:</strong> <span id="property-category"></span></p>
+  
+          <!-- Property Price -->
+          <p><strong>Asking Price:</strong> <span id="property-price"></span></p>
+  
+          <!-- Property Status -->
+          <p><strong>Status:</strong> <span id="property-status"></span></p>
+  
+          <!-- Property Agent -->
+          <p><strong>Agent:</strong> <span id="property-agent"></span></p>
+  
+          <!-- Property Amenities -->
+          <p><strong>Amenities:</strong> <span id="property-amenities"></span></p>
+  
+          <a href="listings-two.html" class="btn style2 mt-3">Back to Listings</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</div>
+
 
   <!-- Add Axios for API calls -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

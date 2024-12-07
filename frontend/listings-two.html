@@ -21,6 +21,14 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
   <title>SolidRoots Properties</title>
+  <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -187,122 +195,160 @@
    
 
 
-    <section class="property-wrap pt-100 pb-75">
-      <div class="container">
-        <div class="row section-title style1 mb-40 align-items-end">
-          <div class="col-md-8">
-            <span>Our Properties</span>
-            <h2>Latest Property Listings</h2>
-          </div>
-        </div>
-        <ul class="nav nav-tabs property-tablist" role="tablist">
-          <li class="nav-item">
-            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab_1" type="button" role="tab">
-              Residential
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab_2" type="button" role="tab">
-              Commercial
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab_3" type="button" role="tab">
-              Land
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab_4" type="button" role="tab">
-              Retail
-            </button>
-          </li>
-        </ul>
-        <div class="tab-content hw-tab-content">
-          <!-- Residential Properties Tab -->
-          <div class="tab-pane fade show active" id="tab_1" role="tabpanel">
-            <div class="row" id="residential-properties">
-              <!-- Residential properties will be injected here -->
-            </div>
-          </div>
-    
-          <!-- Commercial Properties Tab -->
-          <div class="tab-pane fade" id="tab_2" role="tabpanel">
-            <div class="row" id="commercial-properties">
-              <!-- Commercial properties will be injected here -->
-            </div>
-          </div>
-    
-          <!-- Land Properties Tab -->
-          <div class="tab-pane fade" id="tab_3" role="tabpanel">
-            <div class="row" id="land-properties">
-              <!-- Land properties will be injected here -->
-            </div>
-          </div>
-    
-          <!-- Retail Properties Tab -->
-          <div class="tab-pane fade" id="tab_4" role="tabpanel">
-            <div class="row" id="retail-properties">
-              <!-- Retail properties will be injected here -->
-            </div>
-          </div>
+  <section class="property-wrap pt-100 pb-75">
+    <div class="container">
+      <div class="row section-title style1 mb-40 align-items-end">
+        <div class="col-md-8">
+          <span>Our Properties</span>
+          <h2>Featured Property Listings</h2>
         </div>
       </div>
-    </section>
-    
+      <ul class="nav nav-tabs property-tablist" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab_1" type="button" role="tab">
+            Residential
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab_2" type="button" role="tab">
+            Commercial
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab_3" type="button" role="tab">
+            Land
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab_4" type="button" role="tab">
+            Retail
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content hw-tab-content">
+        <!-- Residential Properties Tab -->
+        <div class="tab-pane fade show active" id="tab_1" role="tabpanel">
+          <div class="row" id="residential-properties"></div>
+          <div class="pagination" id="residential-pagination"></div>
+        </div>
+  
+        <!-- Commercial Properties Tab -->
+        <div class="tab-pane fade" id="tab_2" role="tabpanel">
+          <div class="row" id="commercial-properties"></div>
+          <div class="pagination" id="commercial-pagination"></div>
+        </div>
+  
+        <!-- Land Properties Tab -->
+        <div class="tab-pane fade" id="tab_3" role="tabpanel">
+          <div class="row" id="land-properties"></div>
+          <div class="pagination" id="land-pagination"></div>
+        </div>
+  
+        <!-- Retail Properties Tab -->
+        <div class="tab-pane fade" id="tab_4" role="tabpanel">
+          <div class="row" id="retail-properties"></div>
+          <div class="pagination" id="retail-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Add your script here, at the end of the body section -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-      const endpoints = {
-        residential: 'http://localhost:3000/api/residentialproperties',
-        commercial: 'http://localhost:3000/api/commercialproperties',
-        land: 'http://localhost:3000/api/lands',
-        retail: 'http://localhost:3000/api/retailproperties'
-      };
-    
-      // Fetch and display properties in each tab
-      const fetchProperties = async (type, containerId) => {
-        try {
-          const response = await axios.get(endpoints[type]);
-          const properties = response.data;
-    
-          const container = document.getElementById(containerId);
-          container.innerHTML = properties.map(property => `
-            <div class="col-xl-4 col-lg-6 col-md-6">
-              <div class="property-card style2">
-               <div class="property-img-slider owl-carousel">
-              ${property.images.map(image => `<img src="http://localhost:3000/uploads/${image}" alt="Property Image" class="img-fluid"  crossorigin="anonymous" />`).join('')}
-            </div>
-            
-                <div class="property-info">
-                  <div class="property-status-wrap">
-                    <span class="property-status">${property.status}</span>
-                    <span class="property-status">${property.availability}</span>
-                    <p class="property-price">${property.price}</p>
+        // JavaScript code goes here (the entire code you provided, modified as needed)
+        const endpoints = {
+            residential: 'http://localhost:3000/api/residentialproperties',
+            commercial: 'http://localhost:3000/api/commercialproperties',
+            land: 'http://localhost:3000/api/lands',
+            retail: 'http://localhost:3000/api/retailproperties',
+        };
+      
+        const propertiesData = {}; // To store properties for each category
+        const currentPage = {}; // To track the current page for each category
+        const propertiesPerPage = 9; // Number of properties per page
+      
+        const fetchProperties = async (type, containerId, paginationContainerId) => {
+            try {
+                const response = await axios.get(endpoints[type]);
+                propertiesData[type] = response.data;
+                currentPage[type] = 1; // Initialize the page to 1
+                renderProperties(type, containerId, paginationContainerId);
+            } catch (error) {
+                console.error(`Error fetching ${type} properties:`, error);
+            }
+        };
+      
+        const renderProperties = (type, containerId, paginationContainerId) => {
+            const properties = propertiesData[type];
+            const container = document.getElementById(containerId);
+            const paginationContainer = document.getElementById(paginationContainerId);
+      
+            // Calculate the current slice of properties to display
+            const startIndex = (currentPage[type] - 1) * propertiesPerPage;
+            const endIndex = startIndex + propertiesPerPage;
+            const currentProperties = properties.slice(startIndex, endIndex);
+      
+            // Create a fragment to avoid multiple reflows
+            const fragment = document.createDocumentFragment();
+      
+            currentProperties.forEach(property => {
+                const propertyCard = document.createElement('div');
+                propertyCard.classList.add('col-xl-4', 'col-lg-6', 'col-md-6');
+      
+                const propertyContent = `
+                  <div class="property-card style2">
+                    
+                    <div class="property-img">
+    <!-- Displaying only the first image -->
+    <img src="http://localhost:3000/uploads/${property.images[0].replace(/^\/?uploads\//, '')}" alt="Property Image" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;" />
+  </div>
+                    <div class="property-info">
+                      <div class="property-status-wrap">
+                        <span class="property-status">${property.status}</span>
+                        <p class="property-price">${property.price}</p>
+                      </div>
+                      <h3>
+                        <a href="listing-details.html?id=${property._id}">${property.location}</a>
+                      </h3>
+                      <ul class="property-metainfo list-style">
+                        <span class="property-status">${property.availability}</span>
+                      </ul>
+                      <a href="listing-details.html?id=${property._id}" class="btn style1 mt-20">See Details</a>
+                    </div>
                   </div>
-                  <h3>
-                    <a href="listing-details.html?id=${property._id}">${property.location}</a>
-                  </h3>
-                  <ul class="property-metainfo list-style">
-                    <li><i class="flaticon-double-bed"></i>${property.beds || 'N/A'}</li>
-                    <li><i class="flaticon-bath-tub"></i>${property.baths || '0'}</li>
-                    <li><i class="flaticon-square"></i>${property.size || '0'} </li>
-                  </ul>
-                  <a href="listing-details.html?id=${property._id}" class="btn style1 mt-20">See Details</a>
-                </div>
-              </div>
-            </div>
-          `).join('');
-        } catch (error) {
-          console.error('Error fetching properties:', error);
-        }
-      };
-    
-      // Fetch properties for each category when the page loads
-      window.onload = () => {
-        fetchProperties('residential', 'residential-properties');
-        fetchProperties('commercial', 'commercial-properties');
-        fetchProperties('land', 'land-properties');
-        fetchProperties('retail', 'retail-properties');
-      };
+                `;
+                propertyCard.innerHTML = propertyContent;
+                fragment.appendChild(propertyCard);
+            });
+      
+            container.innerHTML = ''; // Clear the container first
+            container.appendChild(fragment);
+      
+            // Render pagination
+            const totalPages = Math.ceil(properties.length / propertiesPerPage);
+            paginationContainer.innerHTML = Array.from({ length: totalPages }, (_, i) => `
+              <button class="pagination-btn ${i + 1 === currentPage[type] ? 'active' : ''}" 
+                onclick="changePage('${type}', ${i + 1}, '${containerId}', '${paginationContainerId}')">
+                ${i + 1}
+              </button>
+            `).join('');
+        };
+      
+        const changePage = (type, page, containerId, paginationContainerId) => {
+            currentPage[type] = page;
+            renderProperties(type, containerId, paginationContainerId);
+        };
+      
+        // Fetch properties for each category when the page loads
+        window.onload = () => {
+            fetchProperties('residential', 'residential-properties', 'residential-pagination');
+            fetchProperties('commercial', 'commercial-properties', 'commercial-pagination');
+            fetchProperties('land', 'land-properties', 'land-pagination');
+            fetchProperties('retail', 'retail-properties', 'retail-pagination');
+        };
     </script>
+  
     
   
 
@@ -319,9 +365,7 @@
               <a href="index.html" class="footer-logo">
                 <img src="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png" alt="Solidroots Properties Logo" />
               </a>
-              <p style="margin-top: 15px;">
-                Solidroots Properties provides exceptional real estate services with a focus on quality, trust, and growth.
-              </p>
+              
             </div>
           </div>
           
