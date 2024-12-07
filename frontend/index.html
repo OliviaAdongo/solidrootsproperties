@@ -607,8 +607,7 @@
           </div>
         </div>
       </section>
-      <!-- City section start -->
-      <!-- <section class="city-wrap ptb-100">
+     
         <div class="container">
           <div class="row">
             <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
@@ -666,77 +665,113 @@
         </div>
       </section> -->
 
-      <!-- City section end -->
-
-      <!-- Testimonial section start -->
-
-      <!-- Testimonial section end -->
 
       <!-- Property Slider start -->
-      <section class="property-slider-wrap pt-100 pb-75">
+      <section class="property-wrap pt-100 pb-75">
         <div class="container">
-          <div class="row">
-            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+            <div class="row section-title style1 mb-40 align-items-end">
               <div class="section-title style1 text-center mb-40">
                 <h2>Easy Price For Home Owners</h2>
                 <p>
-                  Here is a sample list of our properties that are up for rent.
+                  Here is a sample list for our properties that are up for rent.
                 </p>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-center" id="residential-property-list">
-            <!-- Residential properties will be injected here -->
-          </div>
+            <!-- Only Residential Properties Section -->
+            <div class="row" id="residential-properties"></div>
+            <div class="pagination" id="residential-pagination"></div>
         </div>
-      </section>
-      
-      <script>
-        const fetchResidentialProperties = async () => {
-          try {
-            const response = await axios.get('http://localhost:3000/api/residentialproperties');
-            let properties = response.data;
-      
-            // Sort properties by creation date (descending) and get the latest 6
-            properties = properties
-              .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-              .slice(0, 6);
-      
-            const container = document.getElementById('residential-property-list');
-            container.innerHTML = properties.map(property => `
-              <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-                <div class="property-card style3">
-                  <div class="property-img">
-                    <img src="http://localhost:3000/uploads/${property.images[0]}" alt="Property Image" class="img-fluid" crossorigin="anonymous" />
-                    <span class="property-status">${property.status}</span>
-                    <span class="property-status">${property.availability}</span>
-                  </div>
-                  <div class="property-info">
-                    <div class="property-status-wrap">
-                      <span class="property-state"><i class="flaticon-home"></i>House</span>
-                      <p class="property-price">${property.price}</p>
-                    </div>
-                    <h3>
-                      <a href="listing-details.html?id=${property._id}">${property.location}</a>
-                    </h3>
-                    <p><i class="flaticon-location"></i>${property.location}</p>
-                    <ul class="property-metainfo list-style">
-                      <li><i class="flaticon-double-bed"></i>${property.beds || 'N/A'}</li>
-                      <li><i class="flaticon-bath-tub"></i>${property.baths || '0'}</li>
-                      <li><i class="flaticon-square"></i>${property.size || 'N/A'} sqft</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            `).join('');
-          } catch (error) {
-            console.error('Error fetching residential properties:', error);
-          }
+    </section>
+    
+    <!-- Add your script here, at the end of the body section -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const endpoint = 'http://localhost:3000/api/residentialproperties'; // Only residential properties endpoint
+        const propertiesData = {}; // To store properties
+        const currentPage = {}; // To track the current page
+        const propertiesPerPage = 9; // Number of properties per page
+    
+        // Fetch residential properties
+        const fetchProperties = async (containerId, paginationContainerId) => {
+            try {
+                const response = await axios.get(endpoint);
+                propertiesData.residential = response.data;
+                currentPage.residential = 1; // Initialize the page to 1
+                renderProperties(containerId, paginationContainerId);
+            } catch (error) {
+                console.error('Error fetching residential properties:', error);
+            }
         };
-      
+    
+        // Render properties (residential only)
+        const renderProperties = (containerId, paginationContainerId) => {
+            const properties = propertiesData.residential;
+            const container = document.getElementById(containerId);
+            const paginationContainer = document.getElementById(paginationContainerId);
+    
+            // Calculate the current slice of properties to display
+            const startIndex = (currentPage.residential - 1) * propertiesPerPage;
+            const endIndex = startIndex + propertiesPerPage;
+            const currentProperties = properties.slice(startIndex, endIndex);
+    
+            // Create a fragment to avoid multiple reflows
+            const fragment = document.createDocumentFragment();
+    
+            currentProperties.forEach(property => {
+                const propertyCard = document.createElement('div');
+                propertyCard.classList.add('col-xl-4', 'col-lg-6', 'col-md-6');
+    
+                const propertyContent = `
+                    <div class="property-card style2">
+                        <div class="property-img">
+                            <!-- Displaying only the first image -->
+                            <img src="http://localhost:3000/uploads/${property.images[0].replace(/^\/?uploads\//, '')}" alt="Property Image" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;" />
+                        </div>
+                        <div class="property-info">
+                            <div class="property-status-wrap">
+                                <span class="property-status">${property.status}</span>
+                                <p class="property-price">${property.price}</p>
+                            </div>
+                            <h3>
+                                <a href="listing-details.html?id=${property._id}">${property.location}</a>
+                            </h3>
+                            <ul class="property-metainfo list-style">
+                                <span class="property-status">${property.availability}</span>
+                            </ul>
+                            <a href="listing-details.html?id=${property._id}" class="btn style1 mt-20">See Details</a>
+                        </div>
+                    </div>
+                `;
+                propertyCard.innerHTML = propertyContent;
+                fragment.appendChild(propertyCard);
+            });
+    
+            container.innerHTML = ''; // Clear the container first
+            container.appendChild(fragment);
+    
+            // Render pagination
+            const totalPages = Math.ceil(properties.length / propertiesPerPage);
+            paginationContainer.innerHTML = Array.from({ length: totalPages }, (_, i) => `
+                <button class="pagination-btn ${i + 1 === currentPage.residential ? 'active' : ''}" 
+                    onclick="changePage(${i + 1}, '${containerId}', '${paginationContainerId}')">
+                    ${i + 1}
+                </button>
+            `).join('');
+        };
+    
+        // Change page
+        const changePage = (page, containerId, paginationContainerId) => {
+            currentPage.residential = page;
+            renderProperties(containerId, paginationContainerId);
+        };
+    
         // Fetch residential properties on page load
-        window.onload = fetchResidentialProperties;
-      </script>
+        window.onload = () => {
+            fetchProperties('residential-properties', 'residential-pagination');
+        };
+    </script>
+    
+
       
       
       <!-- Property Slider end -->
