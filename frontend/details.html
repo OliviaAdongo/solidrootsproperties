@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Land Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    .land-details {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .land-details img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .land-details h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="land-details">
+    <h2>Loading Land Details...</h2>
+    <p id="location"></p>
+    <p id="price"></p>
+    <p id="availability"></p>
+    <p id="category"></p>
+    <p id="description"></p>
+    <p id="status"></p>
+    <p id="agent"></p>
+    <div id="images"></div>
+  </div>
+
+  <script>
+    // Extract the land ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const landId = urlParams.get('id');
+
+    if (landId) {
+      // Fetch land details
+      fetch(`/api/lands/${landId}`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Failed to fetch land details");
+          }
+          return response.json();
+        })
+        .then(land => {
+          // Update the HTML with land details
+          document.querySelector('.land-details h2').innerText = `Land Details for ${land.location}`;
+          document.getElementById('location').innerText = `Location: ${land.location}`;
+          document.getElementById('price').innerText = `Price: ${land.price}`;
+          document.getElementById('availability').innerText = `Availability: ${land.availability}`;
+          document.getElementById('category').innerText = `Category: ${land.category}`;
+          document.getElementById('description').innerText = `Description: ${land.description}`;
+          document.getElementById('status').innerText = `Status: ${land.status}`;
+          document.getElementById('agent').innerText = `Agent: ${land.agent}`;
+          
+          // Render images
+          const imagesContainer = document.getElementById('images');
+          if (land.images && land.images.length > 0) {
+            land.images.forEach(imageUrl => {
+              const img = document.createElement('img');
+              img.src = imageUrl;
+              imagesContainer.appendChild(img);
+            });
+          } else {
+            imagesContainer.innerText = "No images available.";
+          }
+        })
+        .catch(error => {
+          console.error(error);
+          document.querySelector('.land-details').innerText = "Failed to load land details.";
+        });
+    } else {
+      document.querySelector('.land-details').innerText = "No land ID specified in the URL.";
+    }
+  </script>
+</body>
+</html>
