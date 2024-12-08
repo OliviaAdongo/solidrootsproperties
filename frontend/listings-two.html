@@ -308,13 +308,16 @@
                         <p class="property-price">${property.price}</p>
                       </div>
                       <h3>
-                        <a href="listing-details.html?id=${property._id}">${property.propertyname}</a>
-                      </h3>
+  <a href="details.html?category=${property.category}&id=${property._id}">
+    ${property.propertyname}
+  </a>
+</h3>
+
                         <p><i class="flaticon-location"></i> <a href="listing-details.html?id=${property._id}">${property.location}</a></p>
                       <ul class="property-metainfo list-style">
                         <span class="property-status">${property.availability}</span>
                       </ul>
-                      <a href="listing-details.html?id=${property._id}" class="btn style1 mt-20">See Details</a>
+                      <a href="details.html?category=${property.category}&id=${property._id}" class="btn style1 mt-20">See Details</a>
                     </div>
                   </div>
                 `;
