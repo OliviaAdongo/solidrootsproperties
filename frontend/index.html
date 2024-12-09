@@ -24,7 +24,8 @@
     <link
       rel="icon"
       type="image/png"
-      href="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png"
+      href="https://i.pinimg.com/736x/30/bd/b7/30bdb7888e4126d0638d9c274417faac.jpg"
+      
     />
   </head>
   <body>
@@ -249,10 +250,11 @@
                         </div> -->
             <div class="form-group">
               <select name="price-range" id="price-range">
-                <option value="0" data-display="Price Range">Location</option>
-                <option value="1">Nairobi</option>
-                <option value="2">Kisumu</option>
-                <option value="3">Mombasa</option>
+                <option value="0" data-display="Price Range">Property Category</option>
+                <option value="1">Land</option>
+                <option value="2">Residential Sale</option>
+                <option value="2">Residential Lettings</option>
+                <option value="3">Commercial</option>
               </select>
             </div>
             <div class="form-group">
@@ -262,7 +264,7 @@
                 </option>
                 <option value="1">Buy</option>
                 <option value="2">Rent</option>
-                <!-- <option value="3">4 Bed 3 Bath</option> -->
+               
               </select>
             </div>
             <div class="form-group">
@@ -587,62 +589,6 @@
         </div>
       </section>
      
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-              <div class="section-title style1 text-center mb-40">
-                <h2>Our Properties</h2>
-                <p>Click below to view our collection</p>
-              </div>
-            </div>
-          </div>
-          <div class="city-slider-one owl-carousel">
-            <div
-              class="city-card style2"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="200"
-            >
-              <img src="assets/img/city/city-20.jpg" alt="Image" />
-              <p>
-                <a href="listings-two.html#popular-jobs" class="btn style2"
-                  >View More</a
-                >
-              </p>
-              <h3><a href="listings-two.html">Residential Properties</a></h3>
-            </div>
-            <div
-              class="city-card style2"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="300"
-            >
-              <img src="assets/img/city/city-21.jpg" alt="Image" />
-              <p>
-                <a href="listings-two.html#hot-jobs" class="btn style2"
-                  >View More</a
-                >
-              </p>
-              <h3><a href="listings-two.html">Commercial Properties</a></h3>
-            </div>
-            <div
-              class="city-card style2"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="400"
-            >
-              <img src="assets/img/city/city-22.jpg" alt="Image" />
-
-              <p>
-                <a href="listings-two.html#hot-jobs" class="btn style2"
-                  >View More</a
-                >
-              </p>
-              <h3><a href="listings-two.html">Land</a></h3>
-            </div>
-          </div>
-        </div>
-      </section> -->
 
 
       <!-- Property Slider start -->
@@ -665,7 +611,7 @@
     <!-- Add your script here, at the end of the body section -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        const endpoint = 'http://localhost:3000/api/residentialproperties'; // Only residential properties endpoint
+        const endpoint = 'https://srpropertiesbackend.vercel.app/api/residentialproperties'; // Only residential properties endpoint
         const propertiesData = {}; // To store properties
         const currentPage = {}; // To track the current page
         const propertiesPerPage = 9; // Number of properties per page
@@ -704,7 +650,7 @@
                     <div class="property-card style2">
                         <div class="property-img">
                             <!-- Displaying only the first image -->
-                            <img src="http://localhost:3000/uploads/${property.images[0].replace(/^\/?uploads\//, '')}" alt="Property Image" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;" />
+                            <img src="https://srpropertiesbackend.vercel.app/uploads/${property.images[0].replace(/^\/?uploads\//, '')}" alt="Property Image" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;" />
                         </div>
                         <div class="property-info">
                             <div class="property-status-wrap">
@@ -718,7 +664,7 @@
                             <ul class="property-metainfo list-style">
                                 <span class="property-status">${property.availability}</span>
                             </ul>
-                            <a href="listing-details.html?id=${property._id}" class="btn style1 mt-20">See Details</a>
+                           <a href="details.html?category=${property.category}&id=${property._id}" class="btn style1 mt-20">See Details</a>
                         </div>
                     </div>
                 `;
@@ -1062,7 +1008,7 @@
                 <div class="footer-widget">
                   <a href="index.html" class="footer-logo">
                     <img
-                      src="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png"
+                      src="https://i.pinimg.com/736x/30/bd/b7/30bdb7888e4126d0638d9c274417faac.jpg"
                       alt="Image"
                     />
                   </a>

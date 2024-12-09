@@ -20,7 +20,7 @@
   <title>SolidRoots Properties</title>
 
   <link rel="icon" type="image/png"
-    href="assets/img/solidroots properties logo c3/solidroots properties logo c3-2.png" />
+    href="https://i.pinimg.com/736x/30/bd/b7/30bdb7888e4126d0638d9c274417faac.jpg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
@@ -59,6 +59,9 @@
     .back-button {
       margin-top: 30px;
     }
+    .bg-white{
+  background: white !important;
+}
   </style>
 </head>
 <body>
@@ -184,16 +187,18 @@
                     <i class="fas fa-map-marker-alt fa-xs pr-2"></i>
                     <span id="property-location">Location</span>
                   </span>
-                  <span class="price text-primary d-block" id="property-price">Price</span>
+                  <span class="price  d-block" id="property-price" style="color: #b78509;">Price</span>
                   <span class="sub-price text-dark d-block">
                     <i class="fas fa-house"></i>
                     <b id="property-size">Size</b>
                   </span>
                 </div>
-                <div class="agent-contact border p-4">
+                
+                <div class="agent-contact border p-4" style="border-radius: 10px; border: #b78509;">
                   <span class="d-block">
-                    <i class="fas fa-phone-volume pr-2"></i>
-                    <span id="property-agent">Agent</span>
+                    
+                    <span style="text-transform: uppercase;  line-height: 10px;letter-spacing: 5px;" class=" text-muted ml-10">Agent</span> : <i class="fas fa-profile pr-2"></i>
+                    <span id="property-agent" class="text-muted"></span>
                   </span>
                 </div>
               </div>
@@ -231,7 +236,7 @@
               </div>
               <!-- Back to Listings Button -->
               <div class="back-button">
-                <a href="listings-two.html" class="btn btn-primary">Back to Listings</a>
+                <a href="listings-two.html" class="btn style2  p-10 mt-20">Back to Listings</a>
               </div>
             </div>
           </div>
@@ -247,10 +252,10 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const endpoints = {
-        Land: "http://localhost:3000/api/lands",
-        Residential: "http://localhost:3000/api/residentialproperties",
-        Commercial: "http://localhost:3000/api/commercialproperties",
-        Retail: "http://localhost:3000/api/retailproperties"
+        Land: "https://srpropertiesbackend.vercel.app/api/lands",
+        Residential: "https://srpropertiesbackend.vercel.app/api/residentialproperties",
+        Commercial: "https://srpropertiesbackend.vercel.app/api/commercialproperties",
+        Retail: "https://srpropertiesbackend.vercel.app/api/retailproperties"
       };
 
       const urlParams = new URLSearchParams(window.location.search);
@@ -282,7 +287,7 @@
           // Update the property details on the page
           document.getElementById("property-name").textContent = data.propertyname;
           document.getElementById("property-location").textContent = data.location;
-          document.getElementById("property-price").textContent = `Kshs. ${data.price}`;
+          document.getElementById("property-price").textContent = ` ${data.price}`;
           document.getElementById("property-size").textContent = data.size;
           document.getElementById("property-agent").textContent = data.agent;
 
@@ -294,7 +299,7 @@
             div.className = `carousel-item ${index === 0 ? "active" : ""}`;
             
             // Assuming the image path is relative to 'uploads' folder
-            div.innerHTML = `<img src="http://localhost:3000/uploads/${img}" class="d-block w-100" alt="Property image">`;
+            div.innerHTML = `<img src="https://srpropertiesbackend.vercel.app/uploads/${img}" class="d-block w-100" alt="Property image">`;
             carousel.appendChild(div);
           });
 
